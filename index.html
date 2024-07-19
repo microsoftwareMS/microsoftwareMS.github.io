@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Aleatorio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Aleatorio</h1>
+        <div id="startOptions">
+            <label for="numQuestions">Selecciona el número de preguntas:</label>
+            <select id="numQuestions">
+                <option value="20">20 Preguntas</option>
+                <option value="30">30 Preguntas</option>
+            </select>
+            <button id="startQuiz">Iniciar Quiz</button>
+        </div>
+        <div id="quizContainer"></div>
+        <button id="checkAnswer" style="display: none;">Comprobar Respuesta</button>
+        <button id="nextQuestion" style="display: none;">Siguiente Pregunta</button>
+        <div id="progressBarContainer" style="display: none;">
+            <div id="progressBar"></div>
+        </div>
+        <div id="timer" style="display: none;">
+            Tiempo restante: <span id="timerValue">60:00</span>
+        </div>
+        <div id="score" style="display: none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
