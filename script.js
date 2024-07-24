@@ -1071,7 +1071,6 @@ const questions = {
     ],
 };
 
-
 let currentQuestionIndex = 0;
 let selectedQuestions = [];
 let score = 0;
@@ -1094,7 +1093,7 @@ document.getElementById('nextQuestion').addEventListener('click', showNextQuesti
 function startQuiz(subject) {
     // Define la cantidad de preguntas y puntos según la materia seleccionada
     const questionsCount = subject === 'arte' ? 30 : 20;
-    const pointsPerQuestion = subject === 'arte' ? 2 : 3;
+    const pointsPerQuestion = subject === 'arte' ? 2 : 1;
     
     // Obtén las preguntas aleatorias
     totalQuestions = questionsCount;
@@ -1172,7 +1171,7 @@ function checkAnswer() {
     if (selectedOption) {
         const answer = selectedOption.value;
         const question = selectedQuestions[currentQuestionIndex - 1];
-        const pointsPerQuestion = totalQuestions === 30 ? 2 : 3;
+        const pointsPerQuestion = totalQuestions === 30 ? 2 : 1;
         
         document.querySelectorAll('input[name="question' + (currentQuestionIndex - 1) + '"]').forEach(option => {
             if (option.value === question.answer) {
@@ -1204,7 +1203,7 @@ function endQuiz() {
     document.getElementById('progressBarContainer').style.display = 'none';
     document.getElementById('timer').style.display = 'none';
     document.getElementById('score').innerHTML = `
-        <p>Tu puntuación es ${score} puntos. (Sobre 60 puntos)</p>
+        <p>Tu puntuación es ${score} puntos. (Sobre ${totalQuestions * (totalQuestions === 30 ? 2 : 1)} puntos)</p>
         <p>Respuestas correctas: ${correctAnswers}</p>
         <p>Respuestas incorrectas: ${incorrectAnswers}</p>
     `;
@@ -1232,4 +1231,3 @@ function updateProgressBar() {
     const percentage = ((currentQuestionIndex / selectedQuestions.length) * 100).toFixed(2);
     progressBar.style.width = `${percentage}%`;
 }
-
