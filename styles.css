@@ -17,18 +17,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     max-width: 90%;
-    width: 600px; /* Ajusta el ancho máximo si es necesario */
+    width: 700px;
     text-align: center;
 }
 
 h1 {
     color: #bb86fc;
-}
-
-label {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    display: block;
 }
 
 select, button {
@@ -47,6 +41,40 @@ button:hover {
     cursor: pointer;
 }
 
+#subjectSelection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.subjectBox {
+    background-color: #292929;
+    border: 2px solid #bb86fc;
+    border-radius: 8px;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.subjectBox:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.subjectName {
+    color: #bb86fc;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.subjectInfo {
+    color: #999797;
+    font-size: 0.9em;
+}
+
 #quizContainer {
     margin-top: 20px;
 }
@@ -57,7 +85,7 @@ button:hover {
     background-color: #292929;
     border-radius: 5px;
     text-align: left;
-    word-wrap: break-word; /* Evita que el texto se salga del contenedor */
+    word-wrap: break-word;
 }
 
 label {
@@ -103,7 +131,7 @@ input[type="radio"] {
         padding: 10px;
     }
     
-    select, button {
+    button {
         font-size: 0.9em;
         padding: 8px;
     }

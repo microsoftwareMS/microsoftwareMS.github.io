@@ -8,14 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Quiz Aleatorio</h1>
-        <div id="startOptions">
-            <label for="numQuestions">Selecciona el número de preguntas:</label>
-            <select id="numQuestions">
-                <option value="20">20 Preguntas</option>
-                <option value="30">30 Preguntas</option>
-            </select>
-            <button id="startQuiz">Iniciar Quiz</button>
+        <h1>Quiz Aleatorios</h1>
+        <div id="subjectSelection">
+            <div class="subjectBox" data-subject="matematicas">
+                <div class="subjectName">Comunicación de Datos</div>
+                <div class="subjectInfo">20 Preguntas</div>
+            </div>
+            <div class="subjectBox" data-subject="ciencias">
+                <div class="subjectName">Sistemas Operativos</div>
+                <div class="subjectInfo">20 Preguntas</div>
+            </div>
+            <div class="subjectBox" data-subject="historia">
+                <div class="subjectName">Sistemas de Base de Datos</div>
+                <div class="subjectInfo">20 Preguntas</div>
+            </div>
+            <div class="subjectBox" data-subject="geografia">
+                <div class="subjectName">Métodos Númericos</div>
+                <div class="subjectInfo">20 Preguntas</div>
+            </div>
+            <div class="subjectBox" data-subject="literatura">
+                <div class="subjectName">Interacción Humana - Computador</div>
+                <div class="subjectInfo">20 Preguntas</div>
+            </div>
+            <div class="subjectBox" data-subject="arte">
+                <div class="subjectName">Realidad Nacional y Geopolítica</div>
+                <div class="subjectInfo">30 Preguntas</div>
+            </div>
         </div>
         <div id="quizContainer"></div>
         <button id="checkAnswer" style="display: none;">Comprobar Respuesta</button>
