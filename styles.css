@@ -21,6 +21,29 @@ body {
     text-align: center;
 }
 
+.matching {
+    display: flex;
+    flex-direction: column;
+}
+
+.term-definition-pair {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.term-definition-pair label {
+    margin-right: 10px;
+}
+
+.term-definition-pair select {
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    padding: 5px; /* Opcional: agrega un poco de espacio interno */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
 h1 {
     color: #bb86fc;
 }
