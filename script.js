@@ -266,16 +266,489 @@ const questions = {
         // Añadir más preguntas para historia
     ],
     ciencias: [
-        { question: "¿Cuál es el elemento químico con símbolo 'O'?", options: ["Oro", "Oxígeno", "Osmio", "Osmio"], answer: "Oxígeno" },
-        // Añadir más preguntas para ciencia
+        {
+            question: "La reasignación de las instrucciones y de los datos a direcciones de memoria se puede realizar en cualquiera de los siguientes pasos:",
+            options: [
+                "a. Tiempo de compilación, tiempo de paginación, tiempo de ejecución.",
+                "b. Tiempo de compilación, tiempo de carga, tiempo de ejecución.",
+                "c. Tiempo de paginación, tiempo de segmentación, tiempo de ejecución.",
+                "d. Tiempo de paginación, tiempo de carga, tiempo de segmentación."
+            ],
+            answer: "b. Tiempo de compilación, tiempo de carga, tiempo de ejecución."
+        },
+        {
+            question: "El hardware que se necesita para soportar la paginación bajo demanda es el siguiente:",
+            options: [
+                "a. Marco de páginas, memoria secundaria.",
+                "b. Marco de páginas, memoria principal.",
+                "c. Tabla de páginas, memoria secundaria.",
+                "d. Tabla de páginas, memoria principal."
+            ],
+            answer: "c. Tabla de páginas, memoria secundaria."
+        },
+        {
+            question: "Una dirección lógica se compone de la siguiente manera:",
+            options: [
+                "a. <número-segmento, desplazamiento>",
+                "b. <valor-segmento, tiempo>",
+                "c. <valor-indicador, tiempo>",
+                "d. <número-indicador, desplazamiento>"
+            ],
+            answer: "a. <número-segmento, desplazamiento>"
+        },
+        {
+            question: "Los espacios de direcciones son:",
+            options: [
+                "a. Virtuales y principales",
+                "b. Lógicos y físicos",
+                "c. Principales y lógicos",
+                "d. Virtuales y lógicos"
+            ],
+            answer: "b. Lógicos y físicos"
+        },
+        {
+            question: "¿Cuál es el requisito principal para la paginación bajo demanda?",
+            options: [
+                "a. Es la necesidad de ejecutar cualquier construcción después de un fallo en la tabla de página",
+                "b. Es la necesidad de reiniciar cualquier instrucción después de un fallo en la tabla de páginas",
+                "c. Es la necesidad de reiniciar cualquier construcción después de un fallo de página",
+                "d. Es la necesidad de ejecutar cualquier instrucción después de un fallo de página"
+            ],
+            answer: "c. Es la necesidad de reiniciar cualquier construcción después de un fallo de página"
+        },
+        {
+            question: "Un compilador C, crea segmentos separados para los siguientes elementos:",
+            options: [
+                "a. Código, variables globales, cúmulo de memoria, pilas usadas por cada hilo de ejecución, biblioteca C estándar",
+                "b. Id, variables globales, cúmulo de memoria, pilas usadas por cada proceso en espera, biblioteca C estándar",
+                "c. Id, variables específicas, cúmulo de espacios, pilas usadas por cada proceso en espera, biblioteca C estándar",
+                "d. Código, variables específicas, cúmulo de espacios, pilas usadas por cada hilo de ejecución, biblioteca C estándar"
+            ],
+            answer: "a. Código, variables globales, cúmulo de memoria, pilas usadas por cada hilo de ejecución, biblioteca C estándar"
+        },
+        {
+            question: "Es un esquema de ____________ de memoria que va a permitir que el espacio de direcciones __________ de un proceso no sea contiguo, va a evitar el problema de encajar __________de memoria de tamaño __________ en el almacén de respaldo.",
+            options: [
+                "a. Planificación, virtuales, espacios, fijos.",
+                "b. Gestionamiento, virtuales, espacios, cambiante.",
+                "c. Gestionamiento, físicas, fragmentos, cambiante.",
+                "d. Planificación, físicas, fragmentos, fijos."
+            ],
+            answer: "c. Gestionamiento, físicas, fragmentos, cambiante."
+        },
+        {
+            question: "El método ______ se utiliza en entornos de __________ por lotes, en el esquema de particiones __________, el S.O va a mantener una tabla que va a indicar las partes de la _________ que están libre y cuales se encuentran ocupadas.",
+            options: [
+                "a. NVL, procesamiento, dinámicas, memoria.",
+                "b. MVT, procesamiento, fijas, memoria",
+                "c. NVL, segmentación, dinámicas, paginación.",
+                "d. MVT, segmentación, fijas, paginación."
+            ],
+            answer: "b. MVT, procesamiento, fijas, memoria"
+        },
+        {
+            question: "Se va a asignar el agujero más pequeño que tenga el tamaño suficiente. Se debe realizar una búsqueda en la lista completa, a menos que se encuentre ordenada según su tamaño.",
+            options: [
+                "a. Primer ajuste",
+                "b. fragmentación",
+                "c. Mejor ajuste",
+                "d. Peor ajuste"
+            ],
+            answer: "c. Mejor ajuste"
+        },
+        {
+            question: "Significado de las siglas TLB",
+            options: [
+                "a. Transaction look buffer",
+                "b. Translation label-aside buffer",
+                "c. Translation look-aside buffer",
+                "d. transaction label buffer"
+            ],
+            answer: "c. Translation look-aside buffer"
+        }
     ],
     literatura: [
-        { question: "¿Quién escribió 'Cien años de soledad'?", options: ["Gabriel García Márquez", "Mario Vargas Llosa", "Pablo Neruda", "Julio Cortázar"], answer: "Gabriel García Márquez" },
-        // Añadir más preguntas para literatura
+        {
+            question: "¿Cuál es una ventaja de las dinámicas de grupo en comparación con las entrevistas?",
+            options: [
+                "a. Mayor facilidad de coordinación",
+                "b. Mayor profundidad en las opiniones recogidas",
+                "c. Mayor diversidad de opiniones",
+                "d. Menor tiempo requerido para realizarlas"
+            ],
+            answer: "c. Mayor diversidad de opiniones"
+        },
+        {
+            question: "Es una actividad de ERU y PSD",
+            options: [
+                "a. Análisis de tareas",
+                "b. Evaluación de usabilidad",
+                "c. Análisis de usuarios",
+                "d. Prototipado"
+            ],
+            answer: "d. Prototipado"
+        },
+        {
+            question: "¿En qué fase del proceso de diseño centrado en el usuario se desarrollan la investigación y los requisitos del usuario?",
+            options: [
+                "a. Fase de especificación del contexto de uso y requisitos",
+                "b. Fase de prototipado",
+                "c. Fase de implementación",
+                "d. Fase de evaluación"
+            ],
+            answer: "a. Fase de especificación del contexto de uso y requisitos"
+        },
+        {
+            question: "¿Cuál es el objetivo principal de involucrar al usuario en el proceso de diseño?",
+            options: [
+                "a. Entender el comportamiento y preferencias del usuario",
+                "b. Aumentar las ventas del producto",
+                "c. Mejorar la estética del producto",
+                "d. Reducir los costos de producción"
+            ],
+            answer: "a. Entender el comportamiento y preferencias del usuario"
+        },
+        {
+            question: "¿Cuál es el objetivo del desarrollo del concepto de producto?",
+            options: [
+                "a. Crear un modelo mental del sistema compartido por usuarios y diseñadores",
+                "b. Mejorar la estética del producto",
+                "c. Aumentar la velocidad de desarrollo",
+                "d. Reducir los costos de producción"
+            ],
+            answer: "a. Crear un modelo mental del sistema compartido por usuarios y diseñadores"
+        },
+        {
+            question: "¿Cómo se describe la usabilidad en el contexto de productos y servicios interactivos?",
+            options: [
+                "a. Como un atributo de calidad que no afecta la satisfacción del usuario.",
+                "b. Como un atributo de calidad que no influye en la aceptación social de los productos.",
+                "c. Como un atributo de calidad que genera satisfacción y aceptación social en productos y servicios interactivos.",
+                "d. Como un atributo de calidad exclusivamente definido por su recorrido histórico."
+            ],
+            answer: "c. Como un atributo de calidad que genera satisfacción y aceptación social en productos y servicios interactivos."
+        },
+        {
+            question: "¿Cuál es una recomendación para evaluar la usabilidad?",
+            options: [
+                "a. Implementar métodos generales que abarquen todos los aspectos de la usabilidad de manera única.",
+                "b. Aplicar un enfoque iterativo para cubrir progresivamente los objetivos establecidos.",
+                "c. Utilizar métodos específicos sin considerar el proceso iterativo.",
+                "d. Evaluar la usabilidad de forma no iterativa para cubrir objetivos rápidamente."
+            ],
+            answer: "b. Aplicar un enfoque iterativo para cubrir progresivamente los objetivos establecidos."
+        },
+        {
+            question: "¿Qué aspecto clave de la usabilidad se enfatiza en relación con la gestión de errores?",
+            options: [
+                "a. La necesidad de que el usuario memorice los errores para evitar su repetición.",
+                "b. La frecuencia con la que se producen errores en el sistema.",
+                "c. La complejidad del sistema que puede llevar a errores frecuentes.",
+                "d. La rapidez con la que se notifican los errores al usuario y la disponibilidad de mecanismos para recuperarse de ellos."
+            ],
+            answer: "d. La rapidez con la que se notifican los errores al usuario y la disponibilidad de mecanismos para recuperarse de ellos."
+        },
+        {
+            question: "¿Cómo se define coloquialmente el término 'usabilidad'?",
+            options: [
+                "a. Como la eficiencia del sistema en términos de velocidad de respuesta.",
+                "b. Como la seguridad del sistema para proteger datos sensibles.",
+                "c. Como la facilidad de uso de una página web, una aplicación informática o cualquier otro sistema que interactúe con un usuario.",
+                "d. Como la capacidad del sistema para manejar múltiples usuarios simultáneamente."
+            ],
+            answer: "c. Como la facilidad de uso de una página web, una aplicación informática o cualquier otro sistema que interactúe con un usuario."
+        },
+        {
+            question: "Según la norma ISO/IEC 9126 (ISO, 2001), ¿cómo se define la usabilidad en el contexto de un producto software?",
+            options: [
+                "a. Como la capacidad del software para cumplir con estándares de seguridad internacionales.",
+                "b. Como la capacidad del software para ser comprendido, aprendido, usado y atractivo para el usuario en condiciones específicas.",
+                "c. Como la capacidad del software para adaptarse a diferentes sistemas operativos.",
+                "d. Como la capacidad del software para ejecutar múltiples tareas simultáneamente."
+            ],
+            answer: "b. Como la capacidad del software para ser comprendido, aprendido, usado y atractivo para el usuario en condiciones específicas."
+        },
+        {
+            question: "¿Cuál es la disciplina que estudia la interacción de los humanos con los ordenadores y cómo pueden ser diseñados para ayudar a las personas a utilizarlos eficazmente?",
+            options: [
+                "a. Interacción humano-computador",
+                "b. Ergonomía",
+                "c. Ingeniería de software",
+                "d. Psicología cognitiva"
+            ],
+            answer: "a. Interacción humano-computador"
+        },
+        {
+            question: "¿Qué aborda el diseño centrado en el usuario (DCU) como metodología de aproximación para el desarrollo de productos según el texto?",
+            options: [
+                "a. El aumento de la velocidad de desarrollo",
+                "b. Conceptos de amplia utilización relacionados con la interacción humano-computador",
+                "c. La reducción de costos de producción",
+                "d. La mejora de la estética del producto"
+            ],
+            answer: "b. Conceptos de amplia utilización relacionados con la interacción humano-computador"
+        },
+        {
+            question: "No es una actividad de CECU",
+            options: [
+                "a. Prototipado",
+                "b. Análisis de tareas",
+                "c. Especificaciones de usabilidad",
+                "d. Análisis de usuarios"
+            ],
+            answer: "a. Prototipado"
+        },
+        {
+            question: "¿Qué aspectos abarca el diseño de la interacción?",
+            options: [
+                "a. Definir los entornos de interacción y su comportamiento",
+                "b. Solo la definición de la interfaz gráfica",
+                "c. Definir los elementos físicos de la interfaz",
+                "d. Mejorar la tecnología del sistema interactivo"
+            ],
+            answer: "a. Definir los entornos de interacción y su comportamiento"
+        },
+        {
+            question: "¿Qué aspecto se destaca sobre el uso de métricas en la medición o evaluación de un producto?",
+            options: [
+                "a. La capacidad de las métricas para representar la estética del producto.",
+                "b. La complejidad de las métricas para medir la funcionalidad del sistema.",
+                "c. La posibilidad de que los atributos evaluados reciban valores numéricos o nominales para justificar su validez.",
+                "d. La necesidad de métricas para evaluar la accesibilidad del producto."
+            ],
+            answer: "c. La posibilidad de que los atributos evaluados reciban valores numéricos o nominales para justificar su validez."
+        },
+        {
+            question: "¿Cómo se describe la utilidad de un sistema?",
+            options: [
+                "a. Como la capacidad del sistema para cumplir con estándares de seguridad.",
+                "b. Como la combinación de la utilidad funcional del sistema y la forma en que los usuarios pueden usar esta funcionalidad.",
+                "c. Únicamente como la capacidad del sistema para realizar múltiples tareas simultáneamente.",
+                "d. Como la capacidad del sistema para ser atractivo visualmente para los usuarios."
+            ],
+            answer: "b. Como la combinación de la utilidad funcional del sistema y la forma en que los usuarios pueden usar esta funcionalidad."
+        },
+        {
+            question: "¿Qué aspecto clave de la usabilidad se enfatiza en relación con la facilidad de aprendizaje?",
+            options: [
+                "a. La facilidad con la que el usuario puede comenzar a trabajar con el sistema rápidamente.",
+                "b. La rapidez con la que el usuario puede dominar todas las funciones del sistema.",
+                "c. La capacidad del sistema para ser utilizado sin entrenamiento previo.",
+                "d. La complejidad del sistema."
+            ],
+            answer: "a. La facilidad con la que el usuario puede comenzar a trabajar con el sistema rápidamente."
+        },
+        {
+            question: "¿Cómo se define el proceso de evaluación de usabilidad?",
+            options: [
+                "a. Como la medición o identificación de problemas que afectan atributos de usabilidad en sistemas o dispositivos específicos, con respecto a usuarios y tareas particulares en contextos específicos.",
+                "b. Como la identificación de problemas estéticos en sistemas y dispositivos.",
+                "c. Como la comparación de sistemas basada únicamente en criterios objetivos.",
+                "d. Como la medición de la satisfacción general de los usuarios con un sistema."
+            ],
+            answer: "a. Como la medición o identificación de problemas que afectan atributos de usabilidad en sistemas o dispositivos específicos, con respecto a usuarios y tareas particulares en contextos específicos."
+        }
     ],
     geografia: [
-        { question: "¿Cuál es el continente más grande del mundo?", options: ["África", "Asia", "América", "Europa"], answer: "Asia" },
-        // Añadir más preguntas para geografía
+        {
+            question: "Método del Trapecio: ¿Qué tipo de funciones se pueden integrar usando el método del trapecio?",
+            options: [
+                "Funciones que tienen discontinuidades en el intervalo de integración.",
+                "Solo funciones polinomiales.",
+                "Solo funciones trigonométricas.",
+                "Cualquier función que sea continua en el intervalo de integración."
+            ],
+            answer: "Cualquier función que sea continua en el intervalo de integración.",
+        },
+        {
+            question: "Método de Simpson 1/3: ¿Cuál es el número mínimo de subintervalos   que deben usarse en el método de Simpson 1/3 para garantizar que la aproximación sea válida? (Es una condición)",
+            options: [
+                "n puede ser cualquier número entero.",
+                "n debe ser par.",
+                "n debe ser impar.",
+                "n debe ser un múltiplo de 3."
+            ],
+            answer: "n debe ser par.",
+        },
+        {
+            question: "Método de la Bisección: ¿Qué condición es necesaria para aplicar el método de bisección a una función f(x) en un intervalo [a, b]?",
+            options: [
+                "f(a) y f(b) deben ser positivos",
+                "f(a)⋅f(b)> 0",
+                "f(a)⋅f(b)< 0",
+                "f(a)⋅f(b)= 0"
+            ],
+            answer: "f(a)⋅f(b)< 0",
+        },
+        {
+            question: "Método de Simpson 3/8: ¿Qué ventaja ofrece el método de Simpson 3/8 sobre el método de Simpson 1/3?",
+            options: [
+                "Es más fácil de calcular manualmente.",
+                "Puede aplicarse a cualquier número de subintervalos (n no tiene condiciones).",
+                "Requiere menos puntos de función.",
+                "Es más preciso para funciones polinomiales de grado superior."
+            ],
+            answer: "Es más preciso para funciones polinomiales de grado superior.",
+        },
+        {
+            type: "matching",
+            question: "Empareja los métodos con su tipo:",
+            terms: ["Método de la Bisección", "Método de Newton-Raphson", "Método de la Falsa Posición"],
+            definitions: ["Método Abierto", "Método Cerrado"],
+            answer: {
+                "Método de la Bisección": "Método Cerrado",
+                "Método de Newton-Raphson": "Método Abierto",
+                "Método de la Falsa Posición": "Método Cerrado"
+            }
+        },
+        {
+            question: "",
+            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/1/3499185/image.png",
+            options: [
+                "La respuesta correcta es la opción A de la imagen",
+                "La respuesta correcta es la opción B de la imagen",
+                "La respuesta correcta es la opción C de la imagen",
+                "La respuesta correcta es la opción D de la imagen"
+            ],
+            answer: "La respuesta correcta es la opción C de la imagen",
+            type: "imageWithOptions"
+        },
+        {
+            question: "",
+            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/2/3499182/image.png",
+            options: [
+                "La respuesta correcta es la opción D de la imagen",
+                "La respuesta correcta es la opción A de la imagen",
+                "La respuesta correcta es la opción C de la imagen",
+                "La respuesta correcta es la opción B de la imagen"
+            ],
+            answer: "La respuesta correcta es la opción A de la imagen",
+            type: "imageWithOptions"
+        },
+        {
+            question: "",
+            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/3/3499183/image.png",
+            options: [
+                "La respuesta correcta es la opción A de la imagen",
+                "La respuesta correcta es la opción B de la imagen",
+                "La respuesta correcta es la opción C de la imagen",
+                "La respuesta correcta es la opción D de la imagen"
+            ],
+            answer: "La respuesta correcta es la opción D de la imagen",
+            type: "imageWithOptions"
+        },
+        {
+            type: "matching",
+            question: "Empareja cada término con su definición en el contexto del Método de Euler:",
+            terms: ["Aproximación siguiente (y_n+1)", "Derivada de la función (f')", "Elegir el Tamaño del Paso ( h )", "Valor inicial (y_0)"],
+            definitions: ["Tasa de cambio de la variable dependiente con respecto a la independiente.", "Valor inicial de la variable dependiente.", "Aproximación a la siguiente posición en el tiempo.", "Incremento pequeño en el tiempo usado para calcular el siguiente valor de la función."],
+            answer: {
+                "Aproximación siguiente (y_n+1)": "Aproximación a la siguiente posición en el tiempo.",
+                "Derivada de la función (f')": "Tasa de cambio de la variable dependiente con respecto a la independiente.",
+                "Elegir el Tamaño del Paso ( h )": "Incremento pequeño en el tiempo usado para calcular el siguiente valor de la función.",
+                "Valor inicial (y_0)": "Valor inicial de la variable dependiente."
+            }
+        },
+        {
+            question: "",
+            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/5/3499181/image.png",
+            options: [
+                "La respuesta correcta es la opción B de la imagen",
+                "La respuesta correcta es la opción C de la imagen",
+                "La respuesta correcta es la opción A de la imagen",
+                "La respuesta correcta es la opción D de la imagen"
+            ],
+            answer: "La respuesta correcta es la opción B de la imagen",
+            type: "imageWithOptions"
+        },
+        {
+            type: "matching",
+            question: "Empareja cada paso del Método de Runge-Kutta de Cuarto Orden con su descripción correspondiente:",
+            terms: ["Calcular k_2",
+                "Elegir el Tamaño del Paso ( h )",
+                "Calcular k_1",
+                "Definir la Ecuación Diferencial y las Condiciones Iniciales",
+                "Aplicar la Fórmula de Runge-Kutta de Cuarto Orden",
+                "Calcular k_4",
+                "Calcular k_3"],
+            definitions: ["Decidir el tamaño del paso h para la aproximación",
+                "Identificar la función f (x, y) en la EDO y establecer el valor inicial y(x_0) = y_0",
+                "Calcular en el punto medio del intervalo usando k_1",
+                "Calcular en el inicio del intervalo usando la función f (x, y)",
+                "Calcular en el punto medio del intervalo usando k_2",
+                "Usar la fórmula de Runge-Kutta de Cuarto Orden para calcular 𝑦 en el siguiente punto 𝑥 + ℎ",
+                "Calcular en el final del intervalo usando k_3"],
+            answer: {
+                "Calcular k_2": "Calcular en el punto medio del intervalo usando k_1",
+                "Elegir el Tamaño del Paso ( h )": "Decidir el tamaño del paso h para la aproximación",
+                "Calcular k_1": "Calcular en el inicio del intervalo usando la función f (x, y)",
+                "Definir la Ecuación Diferencial y las Condiciones Iniciales": "Identificar la función f (x, y) en la EDO y establecer el valor inicial y(x_0) = y_0",
+                "Aplicar la Fórmula de Runge-Kutta de Cuarto Orden":"Usar la fórmula de Runge-Kutta de Cuarto Orden para calcular 𝑦 en el siguiente punto 𝑥 + ℎ",
+                "Calcular k_4":"Calcular en el final del intervalo usando k_3",
+                "Calcular k_3":"Calcular en el punto medio del intervalo usando k_2"
+            }
+        },
+        {
+            question: "",
+            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/7/3499184/image.png",
+            options: [
+                "La respuesta correcta es la opción B de la imagen",
+                "La respuesta correcta es la opción C de la imagen",
+                "La respuesta correcta es la opción A de la imagen",
+                "La respuesta correcta es la opción D de la imagen"
+            ],
+            answer: "La respuesta correcta es la opción D de la imagen",
+            type: "imageWithOptions"
+        },
+        {
+            type: "matching",
+            question: "Empareja cada término del Método de Taylor con su descripción correspondiente:",
+            terms: ["Término de corrección", "Derivada de segundo orden (f′′)", "Derivada de primer orden (f′)", "Tamaño de paso ( h )"],
+            definitions: ["Tasa de cambio de la derivada de primer orden respecto a la variable independiente",
+                "Incremento pequeño en el tiempo usado para calcular el siguiente valor de la función",
+                "Término adicional en la fórmula que mejora la precisión usando derivadas",
+                "Tasa de cambio instantánea de la función respecto a la variable independiente"],
+            answer: {
+                "Término de corrección": "Término adicional en la fórmula que mejora la precisión usando derivadas",
+                "Derivada de segundo orden (f′′)": "Tasa de cambio de la derivada de primer orden respecto a la variable independiente",
+                "Derivada de primer orden (f′)": "Tasa de cambio instantánea de la función respecto a la variable independiente",
+                "Tamaño de paso ( h )": "Incremento pequeño en el tiempo usado para calcular el siguiente valor de la función"
+            }
+        },
+        {
+            question: "",
+            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/9/3499180/image.png",
+            options: [
+                "La respuesta correcta es la opción C de la imagen",
+                "La respuesta correcta es la opción D de la imagen",
+                "La respuesta correcta es la opción B de la imagen",
+                "La respuesta correcta es la opción A de la imagen"
+            ],
+            answer: "La respuesta correcta es la opción B de la imagen",
+            type: "imageWithOptions"
+        },
+        {
+            question: "",
+            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/10/3499186/image.png",
+            options: [
+                "La respuesta correcta es la opción B de la imagen",
+                "La respuesta correcta es la opción C de la imagen",
+                "La respuesta correcta es la opción A de la imagen",
+                "La respuesta correcta es la opción D de la imagen"
+            ],
+            answer: "La respuesta correcta es la opción C de la imagen",
+            type: "imageWithOptions"
+        },
+        {
+            question: "Método Gráfico: ¿Qué característica debe tener la gráfica de una función para identificar una raíz de la ecuación f(x) = 0 mediante el método gráfico?",
+            options: [
+                "La gráfica debe cruzar el eje x",
+                "La gráfica debe ser simétrica respecto al origen.",
+                "La gráfica debe cruzar el eje y",
+                "La gráfica debe tener un máximo o mínimo."
+            ],
+            answer: "La gráfica debe cruzar el eje x",
+        },
     ],
     arte: [
         {
@@ -1075,10 +1548,12 @@ let currentQuestionIndex = 0;
 let selectedQuestions = [];
 let score = 0;
 let totalQuestions = 0;
+let pointsPerQuestion = 0;
 let timer;
 let timeLeft = 3600; // 1 hora en segundos
 let correctAnswers = 0;
 let incorrectAnswers = 0;
+let partiallyCorrectAnswers = 0; // Añadido para contar respuestas parcialmente correctas
 
 document.querySelectorAll('.subjectBox').forEach(box => {
     box.addEventListener('click', function() {
@@ -1091,26 +1566,52 @@ document.getElementById('checkAnswer').addEventListener('click', checkAnswer);
 document.getElementById('nextQuestion').addEventListener('click', showNextQuestion);
 
 function startQuiz(subject) {
-    // Define la cantidad de preguntas y puntos según la materia seleccionada
-    const questionsCount = subject === 'arte' ? 30 : 20;
-    const pointsPerQuestion = subject === 'arte' ? 2 : 1;
+    let questionsCount;
     
-    // Obtén las preguntas aleatorias
+    switch(subject) {
+        case 'matematicas':
+            questionsCount = 20;
+            pointsPerQuestion = 1;
+            break;
+        case 'ciencias':
+            questionsCount = 10;
+            pointsPerQuestion = 2;
+            break;
+        case 'historia':
+            questionsCount = 20;
+            pointsPerQuestion = 1;
+            break;
+        case 'geografia':
+            questionsCount = 10;
+            pointsPerQuestion = 2;
+            break;
+        case 'literatura':
+            questionsCount = 10;
+            pointsPerQuestion = 2;
+            break;
+        case 'arte':
+            questionsCount = 30;
+            pointsPerQuestion = 2;
+            break;
+        default:
+            console.error('Materia no válida');
+            return;
+    }
+
     totalQuestions = questionsCount;
     selectedQuestions = getRandomQuestions(questions[subject], questionsCount);
-    currentQuestionIndex = 0;
     score = 0;
     correctAnswers = 0;
     incorrectAnswers = 0;
-    
-    // Oculta la selección de materia y muestra el quiz
+    partiallyCorrectAnswers = 0; // Reiniciar contador de respuestas parcialmente correctas
+
     document.getElementById('subjectSelection').style.display = 'none';
     document.getElementById('quizContainer').style.display = 'block';
     document.getElementById('checkAnswer').style.display = 'block';
     document.getElementById('nextQuestion').style.display = 'none';
     document.getElementById('progressBarContainer').style.display = 'block';
     document.getElementById('timer').style.display = 'block';
-    
+
     startTimer();
     showNextQuestion();
 }
@@ -1125,20 +1626,53 @@ function showNextQuestion() {
         endQuiz();
         return;
     }
-    
+
     const question = selectedQuestions[currentQuestionIndex];
     const quizContainer = document.getElementById('quizContainer');
-    quizContainer.innerHTML = `
-        <div class="question">
-            <p>${currentQuestionIndex + 1}. ${question.question}</p>
-            ${question.options.map((option, i) => `
-                <label>
-                    <input type="radio" name="question${currentQuestionIndex}" value="${option}">
-                    ${option}
-                </label>
-            `).join('')}
-        </div>
-    `;
+
+    if (question.type === "matching") {
+        quizContainer.innerHTML = `
+            <div class="question">
+                <p>${currentQuestionIndex + 1}. ${question.question}</p>
+                <div class="matching">
+                    ${question.terms.map(term => `
+                        <div class="term-definition-pair">
+                            <label>${term}:</label>
+                            <select name="match${currentQuestionIndex}_${term}">
+                                <option value="">Selecciona una definición</option>
+                                ${question.definitions.map(def => `<option value="${def}">${def}</option>`).join('')}
+                            </select>
+                        </div>
+                    `).join('<br>')}
+                </div>
+            </div>
+        `;
+    } else if (question.image) {
+        quizContainer.innerHTML = `
+            <div class="question">
+                <p>${currentQuestionIndex + 1}. ${question.question}</p>
+                <img src="${question.image}" alt="Pregunta de imagen" style="max-width: 100%; height: auto;">
+                ${question.options.map((option, i) => `
+                    <label>
+                        <input type="radio" name="question${currentQuestionIndex}" value="${option}">
+                        ${option}
+                    </label>
+                `).join('')}
+            </div>
+        `;
+    } else {
+        quizContainer.innerHTML = `
+            <div class="question">
+                <p>${currentQuestionIndex + 1}. ${question.question}</p>
+                ${question.options.map((option, i) => `
+                    <label>
+                        <input type="radio" name="question${currentQuestionIndex}" value="${option}">
+                        ${option}
+                    </label>
+                `).join('')}
+            </div>
+        `;
+    }
 
     document.getElementById('checkAnswer').style.display = 'block';
     document.getElementById('nextQuestion').style.display = 'none';
@@ -1149,16 +1683,22 @@ function showNextQuestion() {
             label.classList.remove('correct', 'incorrect');
         });
     });
-    
-    // Hacer los inputs seleccionables
-    document.querySelectorAll('input[name="question' + currentQuestionIndex + '"]').forEach(input => {
-        input.disabled = false;
-    });
 
-    // Limpiar la selección previa
-    document.querySelectorAll('input[name="question' + currentQuestionIndex + '"]').forEach(input => {
-        input.checked = false;
-    });
+    // Hacer los inputs seleccionables
+    if (question.type !== "matching") {
+        document.querySelectorAll('input[name="question' + currentQuestionIndex + '"]').forEach(input => {
+            input.disabled = false;
+        });
+
+        // Limpiar la selección previa
+        document.querySelectorAll('input[name="question' + currentQuestionIndex + '"]').forEach(input => {
+            input.checked = false;
+        });
+    } else {
+        question.terms.forEach(term => {
+            document.querySelector(`select[name="match${currentQuestionIndex}_${term}"]`).disabled = false;
+        });
+    }
 
     // Actualizar la barra de progreso
     updateProgressBar();
@@ -1167,34 +1707,66 @@ function showNextQuestion() {
 }
 
 function checkAnswer() {
-    const selectedOption = document.querySelector('input[name="question' + (currentQuestionIndex - 1) + '"]:checked');
-    if (selectedOption) {
-        const answer = selectedOption.value;
-        const question = selectedQuestions[currentQuestionIndex - 1];
-        const pointsPerQuestion = totalQuestions === 30 ? 2 : 1;
-        
-        document.querySelectorAll('input[name="question' + (currentQuestionIndex - 1) + '"]').forEach(option => {
-            if (option.value === question.answer) {
-                option.parentElement.classList.add('correct');
-            } else if (option.checked) {
-                option.parentElement.classList.add('incorrect');
+    const question = selectedQuestions[currentQuestionIndex - 1];
+
+    if (question.type === "matching") {
+        let correctTerms = 0;
+        const totalTerms = question.terms.length;
+        const pointsPerTerm = pointsPerQuestion / totalTerms; // Dividir puntos entre términos
+
+        question.terms.forEach(term => {
+            const selectedDefinition = document.querySelector(`select[name="match${currentQuestionIndex - 1}_${term}"]`).value;
+            const correctDefinition = question.answer[term];
+            
+            if (selectedDefinition === correctDefinition) {
+                document.querySelector(`select[name="match${currentQuestionIndex - 1}_${term}"]`).parentElement.classList.add('correct');
+                correctTerms++;
+            } else {
+                document.querySelector(`select[name="match${currentQuestionIndex - 1}_${term}"]`).parentElement.classList.add('incorrect');
             }
         });
-        
-        if (answer === question.answer) {
-            score += pointsPerQuestion;
+
+        if (correctTerms === totalTerms) {
+            score += pointsPerQuestion; // Asignar puntos completos si todos los términos son correctos
             correctAnswers++;
+        } else if (correctTerms > 0) {
+            score += pointsPerTerm * correctTerms; // Asignar puntos parciales
+            partiallyCorrectAnswers++;
         } else {
             incorrectAnswers++;
         }
-        
+
         document.getElementById('checkAnswer').style.display = 'none';
         document.getElementById('nextQuestion').style.display = 'block';
-        document.querySelectorAll('input[name="question' + (currentQuestionIndex - 1) + '"]').forEach(input => {
-            input.disabled = true;
-        });
     } else {
-        alert('Por favor, selecciona una respuesta antes de comprobar.');
+        const selectedOption = document.querySelector('input[name="question' + (currentQuestionIndex - 1) + '"]:checked');
+        if (selectedOption) {
+            const answer = selectedOption.value;
+            const question = selectedQuestions[currentQuestionIndex - 1];
+
+            document.querySelectorAll('input[name="question' + (currentQuestionIndex - 1) + '"]').forEach(option => {
+                if (option.value === question.answer) {
+                    option.parentElement.classList.add('correct');
+                } else if (option.checked) {
+                    option.parentElement.classList.add('incorrect');
+                }
+            });
+
+            if (answer === question.answer) {
+                score += pointsPerQuestion;
+                correctAnswers++;
+            } else {
+                incorrectAnswers++;
+            }
+
+            document.getElementById('checkAnswer').style.display = 'none';
+            document.getElementById('nextQuestion').style.display = 'block';
+            document.querySelectorAll('input[name="question' + (currentQuestionIndex - 1) + '"]').forEach(input => {
+                input.disabled = true;
+            });
+        } else {
+            alert('Por favor, selecciona una respuesta antes de comprobar.');
+        }
     }
 }
 
@@ -1203,9 +1775,10 @@ function endQuiz() {
     document.getElementById('progressBarContainer').style.display = 'none';
     document.getElementById('timer').style.display = 'none';
     document.getElementById('score').innerHTML = `
-        <p>Tu puntuación es ${score} puntos. (Sobre ${totalQuestions * (totalQuestions === 30 ? 2 : 1)} puntos)</p>
+        <p>Tu puntuación es ${score.toFixed(2)} puntos. (Sobre ${totalQuestions * pointsPerQuestion} puntos)</p>
         <p>Respuestas correctas: ${correctAnswers}</p>
         <p>Respuestas incorrectas: ${incorrectAnswers}</p>
+        <p>Respuestas parcialmente correctas: ${partiallyCorrectAnswers}</p>
     `;
     document.getElementById('score').style.display = 'block';
     document.getElementById('nextQuestion').style.display = 'none';
