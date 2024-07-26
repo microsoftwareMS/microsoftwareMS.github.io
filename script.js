@@ -603,7 +603,7 @@ const questions = {
         },
         {
             question: "",
-            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/1/3499185/image.png",
+            image: "img/image2.png",
             options: [
                 "La respuesta correcta es la opción A de la imagen",
                 "La respuesta correcta es la opción B de la imagen",
@@ -615,7 +615,7 @@ const questions = {
         },
         {
             question: "",
-            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/2/3499182/image.png",
+            image: "img/image1.png",
             options: [
                 "La respuesta correcta es la opción D de la imagen",
                 "La respuesta correcta es la opción A de la imagen",
@@ -627,7 +627,7 @@ const questions = {
         },
         {
             question: "",
-            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/3/3499183/image.png",
+            image: "img/image3.png",
             options: [
                 "La respuesta correcta es la opción A de la imagen",
                 "La respuesta correcta es la opción B de la imagen",
@@ -651,7 +651,7 @@ const questions = {
         },
         {
             question: "",
-            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/5/3499181/image.png",
+            image: "img/image4.png",
             options: [
                 "La respuesta correcta es la opción B de la imagen",
                 "La respuesta correcta es la opción C de la imagen",
@@ -690,7 +690,7 @@ const questions = {
         },
         {
             question: "",
-            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/7/3499184/image.png",
+            image: "img/image5.png",
             options: [
                 "La respuesta correcta es la opción B de la imagen",
                 "La respuesta correcta es la opción C de la imagen",
@@ -717,7 +717,7 @@ const questions = {
         },
         {
             question: "",
-            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/9/3499180/image.png",
+            image: "img/image6.png",
             options: [
                 "La respuesta correcta es la opción C de la imagen",
                 "La respuesta correcta es la opción D de la imagen",
@@ -729,7 +729,7 @@ const questions = {
         },
         {
             question: "",
-            image: "https://aulagrado.unemi.edu.ec/pluginfile.php/1614151/question/questiontext/4628372/10/3499186/image.png",
+            image: "img/image7.png",
             options: [
                 "La respuesta correcta es la opción B de la imagen",
                 "La respuesta correcta es la opción C de la imagen",
@@ -1715,14 +1715,17 @@ function checkAnswer() {
         const pointsPerTerm = pointsPerQuestion / totalTerms; // Dividir puntos entre términos
 
         question.terms.forEach(term => {
-            const selectedDefinition = document.querySelector(`select[name="match${currentQuestionIndex - 1}_${term}"]`).value;
+            const selectElement = document.querySelector(`select[name="match${currentQuestionIndex - 1}_${term}"]`);
+            const selectedDefinition = selectElement.value;
             const correctDefinition = question.answer[term];
-            
+
             if (selectedDefinition === correctDefinition) {
-                document.querySelector(`select[name="match${currentQuestionIndex - 1}_${term}"]`).parentElement.classList.add('correct');
+                selectElement.classList.add('correct');
+                selectElement.classList.remove('incorrect');
                 correctTerms++;
             } else {
-                document.querySelector(`select[name="match${currentQuestionIndex - 1}_${term}"]`).parentElement.classList.add('incorrect');
+                selectElement.classList.add('incorrect');
+                selectElement.classList.remove('correct');
             }
         });
 
