@@ -1704,8 +1704,8 @@ function startQuiz(subject) {
             pointsPerQuestion = 1;
             break;
         case 'ciencias':
-            questionsCount = 10;
-            pointsPerQuestion = 2;
+            questionsCount = 20;
+            pointsPerQuestion = 1;
             break;
         case 'historia':
             questionsCount = 20;
