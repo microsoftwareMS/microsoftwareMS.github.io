@@ -289,12 +289,12 @@ const questions = {
         {
             question: "Una dirección lógica se compone de la siguiente manera:",
             options: [
-                "a. <número-segmento, desplazamiento>",
-                "b. <valor-segmento, tiempo>",
-                "c. <valor-indicador, tiempo>",
-                "d. <número-indicador, desplazamiento>"
+                "a. &lt;número-segmento, desplazamiento&gt;",
+                "b. &lt;valor-segmento, tiempo&gt;",
+                "c. &lt;valor-indicador, tiempo&gt;",
+                "d. &lt;número-indicador, desplazamiento&gt;"
             ],
-            answer: "a. <número-segmento, desplazamiento>"
+            answer: "a. &lt;número-segmento, desplazamiento&gt;"
         },
         {
             question: "Los espacios de direcciones son:",
