@@ -365,7 +365,137 @@ const questions = {
                 "d. transaction label buffer"
             ],
             answer: "c. Translation look-aside buffer"
-        }
+        },
+        {
+            question: "Se puede asignar __________ a los procesos, limitándolos al tipo de ____ que necesitan para realizar su tarea. Los privilegios y programas también se les puede asignar _____. A los usuarios se les asignan roles se basan en ___________ asignadas a los roles.",
+            options: [
+              "a. Privilegios, acceso, roles, contraseñas.",
+              "b. Privilegios, datos, prioridades, contraseñas.",
+              "c. Orden, acceso, roles, variables.",
+              "d. Orden, datos, prioridades, variables.",
+            ],
+            answer: "a. Privilegios, acceso, roles, contraseñas."
+          },
+          {
+            question: "La principal razón es la necesidad de ________ una violación ___________ o __________ de una restricción de ________ por parte de algún usuario.",
+            options: [
+              "a. Disuadir, intencionada, maliciosa, acceso.",
+              "b. Disuadir, lógica, física, acceso.",
+              "c. Limitar, intencionada, maliciosa, virus.",
+              "d. Limitar, lógica, física, virus.",
+            ],
+            answer: "a. Disuadir, intencionada, maliciosa, acceso."
+          },
+          {
+            question: "De las siguientes alternativas seleccione cuál NO forma parte de las amenazas del sistema y la red",
+            options: [
+              "a. Virus",
+              "b. Gusanos",
+              "c. Denegación de servicio",
+              "d. Escaneo de puertos",
+            ],
+            answer: "a. Virus"
+          },
+          {
+            question: "¿Cuál es la desventaja de la sustitución óptima de páginas?",
+            options: [
+              "a. Es que este algoritmo resulta difícil de implementar, ya que requiere un conocimiento futuro de la cadena de referencia",
+              "b. Es que este algoritmo resulta difícil de implementar, ya que requiere un conocimiento previo de la cadena de referencia",
+              "c. Es que este algoritmo resulta difícil de modificar, ya que requiere un conocimiento futuro de la cadena de valores",
+              "d. Es que este algoritmo resulta difícil de modificar, ya que requiere un conocimiento previo de la cadena de valores",
+            ],
+            answer: "a. Es que este algoritmo resulta difícil de implementar, ya que requiere un conocimiento futuro de la cadena de referencia"
+          },
+          {
+            question: "Primer paso para la mejora de la seguridad de cualquier aspecto informático es:",
+            options: [
+              "a. Política de seguridad",
+              "b. Evaluación de la vulnerabilidad",
+              "c. Auditoría",
+              "d. Contabilización y registro",
+            ],
+            answer: "a. Política de seguridad"
+          },
+          {
+            question: "La técnica más sencilla y común para la autenticación de la identidad es:",
+            options: [
+              "a. Contraseñas",
+              "b. Biométrica",
+              "c. Reconocimiento facial",
+              "d. Firmas digitales",
+            ],
+            answer: "a. Contraseñas"
+          },
+          {
+            question: "Las columnas de la matriz de acceso van a representar los _________ y las filas van a representar los________.",
+            options: [
+              "a. Dominios, objetos.",
+              "b. Dominios, rangos.",
+              "c. Rangos, objetos.",
+              "d. Objetos, dominios.",
+            ],
+            answer: "d. Objetos, dominios."
+          },
+          {
+            question: "¿Cuál es el principio directores clave?",
+            options: [
+              "a. Principio del mínimo rango",
+              "b. Principio del máximo privilegio",
+              "c. Principio del máximo rango",
+              "d. Principio del mínimo privilegio",
+            ],
+            answer: "d. Principio del mínimo privilegio"
+          },
+          {
+            question: "Una variante de esta técnica es un programa que emula el típico programa de inicio de sesión. Un usuario que no tenga sobre aviso va a tratar de iniciar sesión en un ordenador y va a observar que aparentemente ha escrito mal su contraseña; luego va a intentar otra vez y tiene éxito.",
+            options: [
+              "a. Puerta trasera",
+              "b. Caballo de Troya",
+              "c. Bomba lógica",
+              "d. Desbordamiento de pila y de búfer",
+            ],
+            answer: "b. Caballo de Troya"
+          },
+          {
+            question: "Seleccione los cuatro niveles de las medidas de seguridad",
+            options: [
+              "a. Software, hardware, lógico, físico",
+              "b. Físico, software, lógico, red",
+              "c. Humano, Hardware, S.O, físico",
+              "d. Físico, humano, S.O, red",
+            ],
+            answer: "d. Físico, humano, S.O, red"
+          },
+          {
+            question: "Permitir una modificación controlada del contenido de las entradas de acceso requiere tres operaciones adicionales:",
+            options: [
+              "a. Copia limitada, trasferencia y copia",
+              "b. Copia limitada, control, copia",
+              "c. Owner, copy y transferencia",
+              "d. Owner, copy y control",
+            ],
+            answer: "d. Owner, copy y control"
+          },
+          {
+            question: "En este sistema, el usuario es retado con una pregunta y debe responder a la pregunta de manera correcta. El sistema aplica la función, si los dos resultados se corresponden entonces se permite el acceso.",
+            options: [
+              "a. Contraseñas de un solo uso",
+              "b. Contraseñas cifradas",
+              "c. Contraseñas reutilizables",
+              "d. Contraseñas complejas",
+            ],
+            answer: "a. Contraseñas de un solo uso"
+          },
+          {
+            question: "De las siguientes alternativas seleccione la que NO forma parte de las violaciones de seguridad accidentales y maliciosas:",
+            options: [
+              "a. Ruptura de la integridad",
+              "b. Ruptura de la confiabilidad",
+              "c. Ruptura de la eficiencia",
+              "d. Denegación de servicio",
+            ],
+            answer: "c. Ruptura de la eficiencia"
+          }
     ],
     literatura: [
         {
