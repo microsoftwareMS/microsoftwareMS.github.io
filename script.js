@@ -879,6 +879,49 @@ const questions = {
             ],
             answer: "La gráfica debe cruzar el eje x",
         },
+        {
+            question: "Seleccione el enunciado correcto respecto a Definiciones de Error en Métodos Numéricos",
+            options: [
+                "a. Se refiere a errores humanos al realizar cálculos matemáticos.",
+                "b. Los errores numéricos son imprecisiones que surgen cuando se emplean aproximaciones en lugar de valores exactos cuando realizamos operaciones matemáticas. Dentro de ellos, encontramos el error de truncamiento y errores de redondeo.",
+                "c. Son errores que ocurren debido a fallos en la programación de software matemático.",
+                "d. Los errores numéricos son imprecisiones que surgen cuando se emplean valores exactos en lugar de aproximaciones cuando realizamos operaciones matemáticas. Dentro de ellos, encontramos el error de truncamiento y errores de redondeo."
+            ],
+            answer: "b. Los errores numéricos son imprecisiones que surgen cuando se emplean aproximaciones en lugar de valores exactos cuando realizamos operaciones matemáticas. Dentro de ellos, encontramos el error de truncamiento y errores de redondeo."
+        },
+        {
+            type: "matching",
+            question: "Empareje según corresponda: Punto Flotante según IEEE 754",
+            terms: ["Precisión Simple (32)", "Precisión Extendida (80)", "Precisión Doble (64)"],
+            definitions: ["64 bits en la Mantisa", "52 bits en la Mantisa", "23 bits en la Mantisa"],
+            answer: {
+                "Precisión Simple (32)": "23 bits en la Mantisa",
+                "Precisión Extendida (80)": "64 bits en la Mantisa",
+                "Precisión Doble (64)": "52 bits en la Mantisa"
+            }
+        },
+        {
+            questionText: "¿Cuál de las siguientes transformaciones se puede usar para linealizar una relación exponencial y=ae^bx?",
+            options: [
+                "a. Aplicar logaritmo natural a ambos lados.",
+                "b. Aplicar la función seno a ambos lados.",
+                "c. Aplicar la raíz cuadrada a ambos lados.",
+                "d. Aplicar la función tangente a ambos lados."
+            ],
+            answer: "a. Aplicar logaritmo natural a ambos lados."
+        },
+        {
+            question: "",
+            image: "img/image8.png",
+            options: [
+                "a. El valor del residuo 𝑟𝑖 es 0 y la predicción del modelo no coincide exactamente con el valor real observado.",
+                "b. El valor del residuo 𝑟𝑖 es 0 y la predicción del modelo coincide exactamente con el valor real observado.",
+                "c. El valor del residuo 𝑟𝑖 es −4 y la predicción del modelo sobreestima el valor real observado.",
+                "d. El valor del residuo 𝑟𝑖​ es 4 y la predicción del modelo subestima el valor real observado."
+            ],
+            answer: "b. El valor del residuo 𝑟𝑖 es 0 y la predicción del modelo coincide exactamente con el valor real observado.",
+            type: "imageWithOptions"
+        }
     ],
     arte: [
         {
