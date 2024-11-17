@@ -16,34 +16,54 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
-    max-width: 90%;
-    width: 700px;
+    width: 80%;
     text-align: center;
 }
 
 .matching {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    gap: 0; /* Asegura que no haya separación entre los elementos */
+}
+
+
+.term-definition-pair * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .term-definition-pair {
+    margin: 0; /* Asegura que no haya margen superior o inferior */
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 10px;
 }
 
+
 .term-definition-pair label {
-    margin-right: 10px;
-    margin-left: 10px;
+    display: block;
+    white-space: nowrap;
+    width: auto;
 }
 
 .term-definition-pair select {
-    width: 200px; /* Ajusta el ancho según sea necesario */
+    width: 250px; /* Ajusta el ancho según sea necesario */
+    height: 40px;
     padding: 5px; /* Opcional: agrega un poco de espacio interno */
     border: 2px solid #333;
     border-radius: 4px;
     font-size: 15px; /* Ajusta el tamaño de la fuente si es necesario */
-    margin-bottom: 10px;
+}
+
+.content-select{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 h1 {
@@ -122,6 +142,14 @@ input[type="radio"] {
     margin-right: 10px;
 }
 
+.text-answer {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    width: 10%;
+    border: 1px solid #ccc;
+}
+
 .correct {
     background-color: #155724;
     color: white;
@@ -150,16 +178,54 @@ input[type="radio"] {
     width: 0%;
 }
 
-#timer {
-    margin-top: 20px;
+.tiempo {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    right: 0;
     font-size: 1.2em;
+    background-color: #bb86fc;
+    top: 50px;
+    width: 80px;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
 }
+
+.puntjetotal {
+    color: #bb86fc;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+
 
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 600px) {
     .container {
+        margin-top: 30px;
         width: 100%;
         padding: 10px;
+    }
+
+    .tiempo {
+        margin: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 0;
+    }
+
+    .text-answer{
+        width: 100px;
+    } 
+
+    #timerValue {
+        font-size: 30px;
     }
     
     button {
