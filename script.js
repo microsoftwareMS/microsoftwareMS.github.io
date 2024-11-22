@@ -25,6 +25,40 @@ let correctAnswers = 0;
 let incorrectAnswers = 0;
 let partiallyCorrectAnswers = 0; // Añadido para contar respuestas parcialmente correctas
 
+import { password } from './js/Pass.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('passwordModal');
+    const passwordInput = document.getElementById('passwordInput');
+    const submitButton = document.getElementById('submitPassword');
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Mostrar el modal
+    modal.style.display = 'block';
+
+    // Validar contraseña
+    submitButton.addEventListener('click', () => {
+        const userCode = passwordInput.value.trim();
+
+        if (password.includes(userCode)) {
+            alert('Acceso permitido. ¡Bienvenido!');
+            modal.style.display = 'none'; // Cerrar el modal
+        } else {
+            errorMessage.textContent = 'Código incorrecto. Inténtelo nuevamente.';
+            passwordInput.value = ''; // Limpiar el campo
+            passwordInput.focus();
+        }
+    });
+
+    // Permitir enviar con la tecla "Enter"
+    passwordInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            submitButton.click();
+        }
+    });
+});
+
+
 document.querySelectorAll('.subjectBox').forEach(box => {
     box.addEventListener('click', function() {
         // Elimina la clase 'active' de todas las cajas
