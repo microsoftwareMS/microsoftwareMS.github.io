@@ -20,10 +20,10 @@ let score = 0;
 let totalQuestions = 0;
 let pointsPerQuestion = 0;
 let timer;
-let timeLeft = 3600; // 1 hora en segundos
+let timeLeft = 3600;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
-let partiallyCorrectAnswers = 0; // Añadido para contar respuestas parcialmente correctas
+let partiallyCorrectAnswers = 0;
 
 import { password } from './js/Pass.js';
 
@@ -33,24 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitButton = document.getElementById('submitPassword');
     const errorMessage = document.getElementById('errorMessage');
 
-    // Mostrar el modal
     modal.style.display = 'block';
 
-    // Validar contraseña
     submitButton.addEventListener('click', () => {
         const userCode = passwordInput.value.trim();
 
         if (password.includes(userCode)) {
             alert('Acceso permitido. ¡Bienvenido!');
-            modal.style.display = 'none'; // Cerrar el modal
+            modal.style.display = 'none';
         } else {
             errorMessage.textContent = 'Código incorrecto. Inténtelo nuevamente.';
-            passwordInput.value = ''; // Limpiar el campo
+            passwordInput.value = '';
             passwordInput.focus();
         }
     });
 
-    // Permitir enviar con la tecla "Enter"
     passwordInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             submitButton.click();
@@ -61,10 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelectorAll('.subjectBox').forEach(box => {
     box.addEventListener('click', function() {
-        // Elimina la clase 'active' de todas las cajas
         document.querySelectorAll('.subjectBox').forEach(b => b.classList.remove('active'));
         
-        // Añade la clase 'active' a la caja seleccionada
         this.classList.add('active');
         
         const subject = this.getAttribute('data-subject');
@@ -77,18 +72,16 @@ document.getElementById('checkAnswer').addEventListener('click', checkAnswer);
 document.getElementById('nextQuestion').addEventListener('click', showNextQuestion);
 
 function startQuiz(subject) {
-    // Reinicia todas las variables relevantes
     currentQuestionIndex = 0;
     selectedQuestions = [];
     score = 0;
     correctAnswers = 0;
     incorrectAnswers = 0;
     partiallyCorrectAnswers = 0;
-    timeLeft = 3600; // Reinicia el temporizador
+    timeLeft = 3600;
 
     let questionsCount;
 
-    // Configura la materia seleccionada
     switch(subject) {
         case 'ASO':
             questionsCount = 30;
@@ -122,7 +115,6 @@ function startQuiz(subject) {
     totalQuestions = questionsCount;
     selectedQuestions = getRandomQuestions(questions[subject], questionsCount);
 
-    // Muestra el contenedor del quiz y oculta la selección de materia
     document.getElementById('subjectSelection').style.display = 'none';
     document.getElementById('quizContainer').style.display = 'block';
     document.getElementById('progressBarContainer').style.display = 'block';
@@ -140,21 +132,18 @@ function getRandomQuestions(questions, num) {
 
 
 function adjustLabelWidth() {
-    // Seleccionamos todos los labels dentro de la pregunta de tipo matching
+
     const labels = document.querySelectorAll('.matching .term-definition-pair label');
     
-    // Variable para guardar el ancho máximo
     let maxWidth = 0;
 
-    // Iteramos sobre todos los labels y encontramos el más largo
     labels.forEach(label => {
-        const labelWidth = label.offsetWidth; // Obtener el ancho del label
+        const labelWidth = label.offsetWidth;
         if (labelWidth > maxWidth) {
-            maxWidth = labelWidth; // Actualizamos el máximo si encontramos un label más ancho
+            maxWidth = labelWidth;
         }
     });
 
-    // Aplicamos el ancho máximo a todos los labels
     labels.forEach(label => {
         label.style.width = `${maxWidth}px`; // Establecemos el ancho más grande
     });
@@ -170,7 +159,6 @@ function showNextQuestion() {
     const question = selectedQuestions[currentQuestionIndex];
     const quizContainer = document.getElementById('quizContainer');
 
-    // Renderiza pregunta de selección múltiple
     if (question.type === "multiple-choice") {
         quizContainer.innerHTML = `
             <div class="question">
@@ -216,7 +204,7 @@ function showNextQuestion() {
                 `).join('')}
             </div>
         `;
-    } else if (question.type === "text") { // Renderizado para preguntas de texto
+    } else if (question.type === "text") {
         quizContainer.innerHTML = `
             <div class="question">
                 <p>${currentQuestionIndex + 1}. ${question.question}</p>
@@ -243,20 +231,17 @@ function showNextQuestion() {
     document.getElementById('checkAnswer').style.display = 'block';
     document.getElementById('nextQuestion').style.display = 'none';
 
-    // Reiniciar la clase de estilo de respuesta en la pregunta anterior
     document.querySelectorAll('.question').forEach(questionDiv => {
         questionDiv.querySelectorAll('label').forEach(label => {
             label.classList.remove('correct', 'incorrect');
         });
     });
 
-    // Hacer los inputs seleccionables
     if (question.type !== "matching") {
         document.querySelectorAll('input[name="question' + currentQuestionIndex + '"]').forEach(input => {
             input.disabled = false;
         });
 
-        // Limpiar la selección previa
         document.querySelectorAll('input[name="question' + currentQuestionIndex + '"]').forEach(input => {
             input.checked = false;
         });
@@ -268,7 +253,6 @@ function showNextQuestion() {
         });
     }
 
-    // Actualizar la barra de progreso
     updateProgressBar();
 
     currentQuestionIndex++;
@@ -283,7 +267,6 @@ function checkAnswer() {
     if (question.type === "multiple-choice") {
         const selectedOptions = Array.from(document.querySelectorAll(`input[name="question${currentQuestionIndex - 1}"]:checked`));
 
-        // Verificar si no se ha seleccionado ninguna opción
         if (selectedOptions.length === 0) {
             alert('Por favor, selecciona al menos una respuesta antes de comprobar.');
             return;
@@ -292,27 +275,25 @@ function checkAnswer() {
         const correctAnswersCount = selectedOptions.filter(option => question.answer.includes(option.value)).length;
         const totalAnswersCount = question.answer.length;
 
-        // Marcar respuestas correctas e incorrectas
         document.querySelectorAll(`input[name="question${currentQuestionIndex - 1}"]`).forEach(option => {
             if (question.answer.includes(option.value)) {
                 option.parentElement.classList.add('correct');
             } else if (option.checked) {
                 option.parentElement.classList.add('incorrect');
-                // Mostrar la respuesta correcta solo cuando la opción esté marcada incorrectamente
+
                 const correctAnswerText = document.createElement('span');
                 correctAnswerText.textContent = `Respuesta correcta: ${question.answer.join(", ")}`;
                 correctAnswerText.style.color = 'green';
                 correctAnswerText.style.fontWeight = 'bold';
-                option.parentElement.appendChild(correctAnswerText); // Agregar al label
+                option.parentElement.appendChild(correctAnswerText);
             }
         });
 
-        // Si las respuestas seleccionadas coinciden exactamente con las correctas
         if (correctAnswersCount === totalAnswersCount && selectedOptions.length === totalAnswersCount) {
             score += pointsPerQuestion;
             correctAnswers++;
         } else if (correctAnswersCount > 0) {
-            score += pointsPerQuestion * (correctAnswersCount / totalAnswersCount); // Puntos parciales
+            score += pointsPerQuestion * (correctAnswersCount / totalAnswersCount);
             partiallyCorrectAnswers++;
         } else {
             incorrectAnswers++;
@@ -327,7 +308,7 @@ function checkAnswer() {
     } else if (question.type === "matching") {
         const unselected = question.terms.some(term => {
             const selectElement = document.querySelector(`select[name="match${currentQuestionIndex - 1}_${term}"]`);
-            return !selectElement.value; // Si alguna opción no está seleccionada
+            return !selectElement.value;
         });
 
         if (unselected) {
@@ -337,7 +318,7 @@ function checkAnswer() {
 
         let correctTerms = 0;
         const totalTerms = question.terms.length;
-        const pointsPerTerm = pointsPerQuestion / totalTerms; // Dividir puntos entre términos
+        const pointsPerTerm = pointsPerQuestion / totalTerms;
 
         question.terms.forEach(term => {
             const selectElement = document.querySelector(`select[name="match${currentQuestionIndex - 1}_${term}"]`);
@@ -352,18 +333,17 @@ function checkAnswer() {
                 selectElement.classList.add('incorrect');
                 selectElement.classList.remove('correct');
 
-                // Mostrar la respuesta correcta debajo de la opción incorrecta
-                const correctAnswerElement = selectElement.nextElementSibling; // El span .correct-answer
+                const correctAnswerElement = selectElement.nextElementSibling;
                 correctAnswerElement.style.display = 'inline-block';
                 correctAnswerElement.innerText = `Respuesta correcta: ${correctDefinition}`;
             }
         });
 
         if (correctTerms === totalTerms) {
-            score += pointsPerQuestion; // Asignar puntos completos si todos los términos son correctos
+            score += pointsPerQuestion;
             correctAnswers++;
         } else if (correctTerms > 0) {
-            score += pointsPerTerm * correctTerms; // Asignar puntos parciales
+            score += pointsPerTerm * correctTerms;
             partiallyCorrectAnswers++;
         } else {
             incorrectAnswers++;
@@ -380,11 +360,10 @@ function checkAnswer() {
         }
 
         const correctAnswer = Array.isArray(question.answer)
-            ? question.answer.map(ans => ans.toLowerCase()) // Convertir a minúsculas si es un array
-            : (question.answer || "").toLowerCase(); // Usar valor por defecto si no es un array
+            ? question.answer.map(ans => ans.toLowerCase())
+            : (question.answer || "").toLowerCase();
 
         if (Array.isArray(correctAnswer)) {
-            // Si hay múltiples respuestas correctas
             if (correctAnswer.includes(answer.toLowerCase())) {
                 score += pointsPerQuestion;
                 correctAnswers++;
@@ -463,74 +442,84 @@ function endQuiz() {
     document.getElementById('nextQuestion').style.display = 'none';
     document.getElementById('checkAnswer').style.display = 'none';
 
-    // Añadir los eventos de clic a los botones
     document.getElementById('retryButton').addEventListener('click', retryQuiz);
     document.getElementById('finishButton').addEventListener('click', finishAttempt);
 }
 
 
 function retryQuiz() {
-    // Reinicia el índice de preguntas y el puntaje
     currentQuestionIndex = 0;
     score = 0;
     correctAnswers = 0;
     incorrectAnswers = 0;
     partiallyCorrectAnswers = 0;
-    timeLeft = 3600; // Restablece el tiempo (1 hora)
+    timeLeft = 3600;
 
-    // Selecciona las preguntas aleatorias nuevamente para la materia seleccionada
-    const subject = document.querySelector('.subjectBox.active').getAttribute('data-subject'); // Asume que la materia seleccionada está marcada como "active"
+    const subject = document.querySelector('.subjectBox.active').getAttribute('data-subject');
     selectedQuestions = getRandomQuestions(questions[subject], totalQuestions);
 
-    // Restablece los contenedores del quiz y muestra la primera pregunta
     document.getElementById('score').style.display = 'none';
     document.getElementById('quizContainer').style.display = 'block';
     document.getElementById('progressBarContainer').style.display = 'block';
     document.getElementById('timer').style.display = 'block';
 
-    startTimer(); // Reinicia el temporizador
-    showNextQuestion(); // Muestra la primera pregunta
+    startTimer();
+    showNextQuestion();
 }
 
 
 function finishAttempt() {
-    // Reinicia las variables globales
     currentQuestionIndex = 0;
     selectedQuestions = [];
     score = 0;
     correctAnswers = 0;
     incorrectAnswers = 0;
     partiallyCorrectAnswers = 0;
-    timeLeft = 3600; // Reinicia el tiempo a 1 hora
+    timeLeft = 3600;
 
-    // Oculta los contenedores del quiz y de resultados
     document.getElementById('quizContainer').style.display = 'none';
     document.getElementById('score').style.display = 'none';
     document.getElementById('progressBarContainer').style.display = 'none';
     document.getElementById('timer').style.display = 'none';
 
-    // Muestra la selección de materia
     document.getElementById('subjectSelection').style.display = 'flex';
 
-    // Reinicia la barra de progreso
     document.getElementById('progressBar').style.width = '0%';
 
-    // Detiene el temporizador
     clearInterval(timer);
 
     alert("Gracias por participar en el quiz. ¡Buen trabajo!");
 }
 
+let isPageVisible = true;
+let lastTimeUpdate = Date.now();
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        isPageVisible = false;
+    } else {
+        isPageVisible = true;
+
+        const timePassed = Math.floor((Date.now() - lastTimeUpdate) / 1000);
+        timeLeft -= timePassed;
+    }
+});
+
 function startTimer() {
     timer = setInterval(() => {
-        timeLeft--;
-        const minutes = Math.floor(timeLeft / 60);
-        const seconds = timeLeft % 60;
-        document.getElementById('timerValue').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-        updateProgressBar();
-        if (timeLeft <= 0) {
-            clearInterval(timer);
-            endQuiz();
+        if (isPageVisible) {
+            timeLeft--;
+            lastTimeUpdate = Date.now();
+
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timerValue').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            updateProgressBar();
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                endQuiz();
+            }
         }
     }, 1000);
 }
