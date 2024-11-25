@@ -621,4 +621,48 @@ export const RCQuestions = [
         answer: "Número de puerto",
         type: "imageWithOptions"
     },
-]
+];
+
+RCQuestions.forEach((question, index) => {
+    if (question.type === "text") {
+        // Ignorar preguntas de tipo "text"
+        return;
+    }
+
+    if (Array.isArray(question.options) && question.options.length === 2 && 
+        question.options.includes("Verdadero") && question.options.includes("Falso")) {
+        return;
+    }
+
+
+    if (question.type === "matching") {
+        // Verificar que términos y definiciones son arreglos válidos
+        if (Array.isArray(question.terms) && Array.isArray(question.definitions)) {
+            // Crear pares combinados
+            const pairs = question.terms.map((term, i) => ({
+                term,
+                definition: question.definitions[i]
+            }));
+
+            // Mezclar los pares
+            const shuffledPairs = pairs.sort(() => Math.random() - 0.5);
+
+            // Asignar términos y definiciones mezclados de vuelta
+            question.terms = shuffledPairs.map(pair => pair.term);
+            question.definitions = shuffledPairs.map(pair => pair.definition);
+        } else {
+            console.error(
+                `Error en la pregunta "${question.question}" en el índice ${index}: 'terms' o 'definitions' no son arreglos válidos.`
+            );
+        }
+    } else if (Array.isArray(question.options)) {
+        // Verificar si las opciones son válidas y mezclarlas
+        question.options = question.options.sort(() => Math.random() - 0.5);
+    } else {
+        console.error(
+            `Error en la pregunta "${question.question}" en el índice ${index}: 'options' no es un arreglo válido.`
+        );
+    }
+});
+
+
