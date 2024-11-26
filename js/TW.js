@@ -789,7 +789,7 @@ export const TWQuestions = [
     },
     {
         question: "¿Los subatributos presentados a continuación a que atributo de calidad pertenecen?",
-        image: "img/img_TW/image3.png",
+        image: "img/img_TW/image4.png",
         options: [
             "Eficiencia",
             "Funcionalidad",
