@@ -267,7 +267,7 @@ export const IS1Questions = [
             "Diagrama de secuencia.",
             "Diagrama de actividad."
         ],
-        answer: "Diagrama de actividad"
+        answer: "Diagrama de actividad."
     },
     {
         question: "¿Cuál de las siguientes afirmaciones describe mejor la función de los escenarios en el proceso de desarrollo de software?",
@@ -317,7 +317,7 @@ export const IS1Questions = [
             "Facilita la creación de código fuente directamente desde el diagrama.",
             "Establece los requisitos de hardware necesarios para ejecutar el software."
         ],
-        answer: "Permite documentar el proceso de desarrollo de software de manera visual y comprensible"
+        answer: "Permite documentar el proceso de desarrollo de software de manera visual y comprensible."
     },
     {
         question: "¿Qué representan las flechas que van del canal de Interfaz al canal de Propietario en el diagrama de canal?",
@@ -327,7 +327,7 @@ export const IS1Questions = [
             "Los mensajes enviados desde la interfaz de usuario al propietario.",
             "Las decisiones tomadas por el propietario."
         ],
-        answer: "Los mensajes enviados desde la interfaz de usuario al propietario"
+        answer: "Los mensajes enviados desde la interfaz de usuario al propietario."
     },
     {
         question: "¿Qué tipo de interacciones capta un caso de uso en el contexto del desarrollo de software?",
@@ -337,7 +337,7 @@ export const IS1Questions = [
             "Solo las interacciones entre los desarrolladores del sistema.",
             "Solo las interacciones entre el equipo de gestión del proyecto y los desarrolladores."
         ],
-        answer: "Las interacciones entre los productores y consumidores de información, así como el sistema en sí"
+        answer: "Las interacciones entre los productores y consumidores de información, así como el sistema en sí."
     },
     {
         question: "¿Cuál es la función de los modelos orientados al flujo en el análisis de requerimientos?",
@@ -367,7 +367,7 @@ export const IS1Questions = [
             "Clases y objetos.",
             "Requisitos y especificaciones."
         ],
-        answer: "Casos de uso, subsistemas, componentes y clases"
+        answer: "Casos de uso, subsistemas, componentes y clases."
     },
     {
         question: "¿Qué representa el proceso de mapeo en el análisis del dominio?",
@@ -407,7 +407,7 @@ export const IS1Questions = [
             "Solo se definen en términos de atributos.",
             "Incluyen referencias a operaciones sobre los datos."
         ],
-        answer: "Solo se definen en términos de atributos"
+        answer: "Solo se definen en términos de atributos."
     },
     {
         question: "¿Qué representa la agregación en un sistema orientado a objetos?",
@@ -427,7 +427,7 @@ export const IS1Questions = [
             "El proveedor es irrelevante para el cliente.",
             "El cliente no puede funcionar sin el proveedor."
         ],
-        answer: "El cliente no puede funcionar sin el proveedor"
+        answer: "El cliente no puede funcionar sin el proveedor."
     },
     {
         question: "¿Qué es un objeto en el contexto de un diagrama de clase?",
@@ -567,7 +567,7 @@ export const IS1Questions = [
             "Para mantener una documentación actualizada.",
             "Para acabar con la incertidumbre y la desconfianza del cliente."
         ],
-        answer: "Para acabar con la incertidumbre y la desconfianza del cliente"
+        answer: "Para acabar con la incertidumbre y la desconfianza del cliente."
     },
     {
         question: "¿Qué valor del manifiesto ágil prioriza la entrega de un producto útil sobre la creación de documentos extensivos?",
