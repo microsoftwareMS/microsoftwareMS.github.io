@@ -724,7 +724,7 @@ export const IMQuestions = [
             "Ley de Cierre.",
             "Ley de Proximidad."
         ],
-        answer: "Ley de Proximidad"
+        answer: "Ley de Proximidad."
     },
     {
         question: "SELECCIONE LA RESPUESTA CORRECTA. ¿Qué representa un 'escenario de uso diario' en el contexto del diseño de interfaces?",
@@ -859,7 +859,6 @@ export const IMQuestions = [
         ],
         answer: "Se refiere a la experiencia de usuario, que es lo que alguien percibe mientras interactúa con un producto o servicio digital."
     },
-    
 ];
 
 IMQuestions.forEach((question, index) => {
