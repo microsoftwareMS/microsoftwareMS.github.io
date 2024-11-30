@@ -1137,7 +1137,57 @@ export const IS1Questions = [
             "Un caso de uso formal incluye objetivos y metas, mientras que un caso de uso informal solo describe acciones a realizar."
         ],
         answer: "Un caso de uso formal describe actividades críticas o complejas, mientras que un caso de uso informal se utiliza en todas las situaciones."
-    }
+    },
+    {
+        question: "Una empresa quiere desarrollar un sistema de gestión interna con una entrega continua de valor para los usuarios finales. Deciden priorizar tareas que generen mayor impacto y minimizar características innecesarias. ¿Qué metodología es más adecuada?",
+        options: ["Lean", "Scrum", "Kanban", "Extreme Programming (XP)"],
+        answer: "Lean"
+      },
+      {
+        question: "Un equipo de desarrollo está trabajando en un proyecto donde los requisitos cambian constantemente. Deciden implementar iteraciones de dos semanas y realizar reuniones diarias para revisar el progreso. ¿Qué metodología están utilizando?",
+        options: ["Kanban", "Lean", "Scrum", "Extreme Programming (XP)"],
+        answer: "Scrum"
+      },
+      {
+        question: "En una empresa, las tareas del equipo se representan en un tablero visual con columnas como 'Por hacer', 'En progreso' y 'Hecho'. Además, se limitan las tareas en cada columna para evitar sobrecarga. ¿Qué metodología están utilizando?",
+        options: ["Lean", "Extreme Programming (XP)", "Kanban", "Scrum"],
+        answer: "Kanban"
+      },
+      {
+        question: "Una empresa de logística usa un sistema donde evalúa la capacidad de cada miembro del equipo y optimiza la asignación de tareas visualmente. Además, las tareas fluyen a través de un proceso definido sin iteraciones fijas. ¿Qué metodología describe este enfoque?",
+        options: ["Extreme Programming (XP)", "Scrum", "Kanban", "Lean"],
+        answer: "Kanban"
+      },
+      {
+        question: "Un equipo decide realizar retrospectivas después de cada iteración para analizar lo que salió bien y lo que puede mejorarse. Además, entregan incrementos funcionales de software al final de cada iteración. ¿Qué metodología es esta?",
+        options: ["Extreme Programming (XP)", "Scrum", "Lean", "Kanban"],
+        answer: "Scrum"
+      },
+      {
+        question: "Una startup quiere lanzar un producto mínimo viable (MVP) rápidamente al mercado para recopilar retroalimentación y mejorar. Su enfoque principal es reducir al máximo los desperdicios y optimizar procesos. ¿Qué metodología es más adecuada?",
+        options: ["Scrum", "Kanban", "Lean", "Extreme Programming (XP)"],
+        answer: "Lean"
+      },
+      {
+        question: "En un proyecto, el equipo trabaja en sprints de una semana, se asegura de que cada miembro colabore en cada etapa del desarrollo y realiza pruebas automatizadas constantes para evitar errores. ¿Qué metodología están aplicando?",
+        options: ["Lean", "Extreme Programming (XP)", "Scrum", "Kanban"],
+        answer: "Extreme Programming (XP)"
+      },
+      {
+        question: "Un equipo de desarrollo se enfoca en prácticas como programación en pareja, desarrollo basado en pruebas (TDD), y entregas frecuentes para garantizar calidad y adaptarse rápidamente a los cambios. ¿Qué metodología están aplicando?",
+        options: ["Kanban", "Lean", "Scrum", "Extreme Programming (XP)"],
+        answer: "Extreme Programming (XP)"
+      },
+      {
+        question: "Un equipo de desarrollo decide enfocarse en mejorar la calidad del código y la colaboración entre desarrolladores mediante la programación en pareja y pruebas continuas. ¿Qué metodología refleja esta práctica?",
+        options: ["Extreme Programming (XP)", "Scrum", "Lean", "Kanban"],
+        answer: "Extreme Programming (XP)"
+      },
+      {
+        question: "Una empresa de software enfrenta desafíos con la gestión de múltiples proyectos y decide implementar un marco visual que permita rastrear el progreso de cada tarea y optimizar el flujo de trabajo. ¿Qué metodología describe este caso?",
+        options: ["Lean", "Scrum", "Kanban", "Extreme Programming (XP)"],
+        answer: "Kanban"
+      }
 ];
 
 IS1Questions.forEach((question, index) => {
@@ -1170,5 +1220,3 @@ IS1Questions.forEach((question, index) => {
         );
     }
 });
-
-
