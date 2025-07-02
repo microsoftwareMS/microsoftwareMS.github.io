@@ -1,17 +1,17 @@
-import { ASOQuestions } from './js/ASO.js';
-import { GBDQuestions } from './js/GBD.js';
-import { IS1Questions } from './js/IS1.js';
-import { IMQuestions } from './js/IM.js';
-import { RCQuestions } from './js/RC.js';
-import { TWQuestions } from './js/TW.js';
+import { DAWQuestions } from './js/PG1.js';
+import { DIQuestions } from './js/PG2.js';
+import { IS2Questions } from './js/PG3.js';
+import { LQuestions } from './js/PG4.js';
+import { MDQuestions } from './js/PG5.js';
+import { TCEQuestions } from './js/PG6.js';
 
 const questions = {
-    ASO: ASOQuestions,
-    GBD: GBDQuestions,
-    IS1: IS1Questions,
-    IM: IMQuestions,
-    RC: RCQuestions,
-    TW: TWQuestions
+    PG1: DAWQuestions,
+    PG2: DIQuestions,
+    PG3: IS2Questions,
+    PG4: LQuestions,
+    PG5: MDQuestions,
+    PG6: TCEQuestions
 };
 
 let currentQuestionIndex = 0;
@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.querySelectorAll('.subjectBox').forEach(box => {
-    box.addEventListener('click', function() {
+    box.addEventListener('click', function () {
         document.querySelectorAll('.subjectBox').forEach(b => b.classList.remove('active'));
-        
+
         this.classList.add('active');
-        
+
         const subject = this.getAttribute('data-subject');
         startQuiz(subject);
     });
@@ -82,29 +82,29 @@ function startQuiz(subject) {
 
     let questionsCount;
 
-    switch(subject) {
-        case 'ASO':
-            questionsCount = 30;
+    switch (subject) {
+        case 'PG1':
+            questionsCount = 15;
             pointsPerQuestion = 2;
             break;
-        case 'GBD':
-            questionsCount = 30;
+        case 'PG2':
+            questionsCount = 15;
             pointsPerQuestion = 2;
             break;
-        case 'IS1':
-            questionsCount = 30;
+        case 'PG3':
+            questionsCount = 15;
             pointsPerQuestion = 2;
             break;
-        case 'IM':
-            questionsCount = 30;
+        case 'PG4':
+            questionsCount = 15;
             pointsPerQuestion = 2;
             break;
-        case 'RC':
-            questionsCount = 30;
+        case 'PG5':
+            questionsCount = 15;
             pointsPerQuestion = 2;
             break;
-        case 'TW':
-            questionsCount = 30;
+        case 'PG6':
+            questionsCount = 15;
             pointsPerQuestion = 2;
             break;
         default:
@@ -134,7 +134,7 @@ function getRandomQuestions(questions, num) {
 function adjustLabelWidth() {
 
     const labels = document.querySelectorAll('.matching .term-definition-pair label');
-    
+
     let maxWidth = 0;
 
     labels.forEach(label => {
@@ -147,6 +147,15 @@ function adjustLabelWidth() {
     labels.forEach(label => {
         label.style.width = `${maxWidth}px`; // Establecemos el ancho más grande
     });
+}
+
+function escapeHTML(str) {
+    return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 }
 
 
@@ -195,7 +204,7 @@ function showNextQuestion() {
         quizContainer.innerHTML = `
             <div class="question">
                 <p>${currentQuestionIndex + 1}. ${question.question}</p>
-                <img src="${question.image}" alt="Pregunta de imagen" style="max-width: 100%; height: auto;">
+                <img src="${question.image}" alt="Pregunta de imagen" style="max-width: 50%; height: auto;">
                 ${question.options.map((option, i) => `
                     <label>
                         <input type="radio" name="question${currentQuestionIndex}" value="${option}">
@@ -218,8 +227,8 @@ function showNextQuestion() {
                 <p>${currentQuestionIndex + 1}. ${question.question}</p>
                 ${question.options.map((option, i) => `
                     <label>
-                        <input type="radio" name="question${currentQuestionIndex}" value="${option}">
-                        ${option}
+                        <input type="radio" name="question${currentQuestionIndex}" value="${escapeHTML(option)}">
+                        ${escapeHTML(option)}
                     </label>
                 `).join('')}
             </div>
@@ -419,7 +428,7 @@ function checkAnswer() {
         document.getElementById('checkAnswer').style.display = 'none';
         document.getElementById('nextQuestion').style.display = 'block';
     }
-    
+
     document.querySelectorAll('input[name="question' + (currentQuestionIndex - 1) + '"]').forEach(input => {
         input.disabled = true;
     });
