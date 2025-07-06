@@ -718,7 +718,907 @@ export const DAWQuestions = [
             "Tener creado el entorno"
         ],
         answer: "Python"
-    }
+    },
+    {
+        question: "¿Cuál es el patrón de diseño utilizado en Django?",
+        options: [
+            "MVM",
+            "MVT",
+            "MVVM",
+            "MVP"
+        ],
+        answer: "MVT"
+    },
+    {
+        question: "¿Cuál es la función principal de la capa de presentación en Django?",
+        options: [
+            "Validar modelos",
+            "Mostrar datos al usuario usando plantillas",
+            "Ejecutar el servidor",
+            "Conectar con la base de datos"
+        ],
+        answer: "Mostrar datos al usuario usando plantillas"
+    },
+    {
+        question: "¿Qué ventaja ofrece la portabilidad de Django?",
+        options: [
+            "Solo funciona en Mac",
+            "No requiere entorno virtual",
+            "Puede ejecutarse en Windows, Linux y Mac OS",
+            "Solo usa HTML5"
+        ],
+        answer: "Puede ejecutarse en Windows, Linux y Mac OS"
+    },
+    {
+        question: "¿Cuál es el objetivo principal del patrón MVC?",
+        options: [
+            "Automatizar el testing",
+            "Separar la lógica, la presentación y los datos",
+            "Optimizar el rendimiento del servidor",
+            "Unificar las capas de desarrollo"
+        ],
+        answer: "Separar la lógica, la presentación y los datos"
+    },
+    {
+        question: "Por recomendaciones de seguridad, ¿qué debe hacer el administrador del servidor?",
+        options: [
+            "Usar únicamente contraseñas de texto plano para compatibilidad",
+            "Mantener todos los puertos abiertos para facilitar el acceso",
+            "Asignar contraseñas seguras y cerrar los puertos innecesarios",
+            "Delegar completamente la seguridad al proveedor de DNS"
+        ],
+        answer: "Asignar contraseñas seguras y cerrar los puertos innecesarios"
+    },
+    {
+        question: "¿Cuál es el objetivo principal del patrón MVC?",
+        options: [
+            "Crear interfaces de usuario gráficas",
+            "Unificar datos y vistas",
+            "Separar la lógica de negocio, datos y presentación",
+            "Reducir código reutilizable"
+        ],
+        answer: "Separar la lógica de negocio, datos y presentación"
+    },
+    {
+        question: "¿Cuál es la diferencia principal entre HTTP y HTTPS?",
+        options: [
+            "HTTP solo funciona en móviles",
+            "HTTP usa más ancho de banda",
+            "HTTPS no permite intercambio de datos",
+            "HTTPS proporciona conexión segura y cifrada"
+        ],
+        answer: "HTTPS proporciona conexión segura y cifrada"
+    },
+    {
+        question: "¿Cuál es una ventaja de AngularJS sobre JavaScript tradicional?",
+        options: [
+            "Se necesita menos código para manipular el DOM",
+            "Requiere más configuración manual",
+            "Solo funciona en backend",
+            "Aumenta la complejidad del código"
+        ],
+        answer: "Se necesita menos código para manipular el DOM"
+    },
+    {
+        question: "¿Qué elemento se usa para mostrar contenido HTML desde una vista?",
+        options: [
+            "render()",
+            "return HTML()",
+            "view_html()",
+            "display()"
+        ],
+        answer: "render()"
+    },
+    {
+        question: "¿Por qué es importante elegir una tarifa de tráfico ilimitado en ciertos servidores?",
+        options: [
+            "Para mejorar la velocidad de CPU y RAM asignadas",
+            "Para soportar plataformas que ofrecen descargas de contenidos multimedia sin sobrecargar el servidor",
+            "Para garantizar encriptación de datos HTTPS",
+            "Para reducir la latencia en conexiones locales"
+        ],
+        answer: "Para soportar plataformas que ofrecen descargas de contenidos multimedia sin sobrecargar el servidor"
+    },
+    {
+        question: "¿Qué componente en Django define la estructura de los datos?",
+        options: [
+            "Template",
+            "Model",
+            "View",
+            "URL"
+        ],
+        answer: "Model"
+    },
+    {
+        question: "¿Dónde se instalan los paquetes de Django por primera vez?",
+        options: [
+            "En el navegador",
+            "Desde la terminal o línea de comandos",
+            "Mediante un archivo .exe",
+            "Desde una aplicación móvil"
+        ],
+        answer: "Desde la terminal o línea de comandos"
+    },
+    {
+        question: "¿Dónde se define la lógica que maneja una solicitud en Django?",
+        options: [
+            "views.py",
+            "templates",
+            "settings.py",
+            "models.py"
+        ],
+        answer: "views.py"
+    },
+    {
+        question: "¿Qué parte de una URL contiene los parámetros para encontrar un recurso?",
+        options: [
+            "Query",
+            "Host",
+            "Header",
+            "Path"
+        ],
+        answer: "Query"
+    },
+    {
+        question: "¿Cuál es una ventaja de usar módulos en Python?",
+        options: [
+            "Evitan el uso de funciones",
+            "Permiten reutilizar código y organizar funciones en archivos separados",
+            "Permiten ejecutar scripts directamente desde HTML",
+            "Obligan al uso de variables globales"
+        ],
+        answer: "Permiten reutilizar código y organizar funciones en archivos separados"
+    },
+    {
+        question: "¿Qué lenguaje de programación se utiliza en Django?",
+        options: [
+            "Java",
+            "Python",
+            "JavaScript",
+            "C#"
+        ],
+        answer: "Python"
+    },
+    {
+        question: "¿Cómo funcionan las APIs correctamente?",
+        options: [
+            "Solo de forma local",
+            "Solo entre apps del mismo lenguaje",
+            "Sin seguir reglas específicas",
+            "Cumpliendo ciertos parámetros o reglas"
+        ],
+        answer: "Cumpliendo ciertos parámetros o reglas"
+    },
+    {
+        question: "¿Qué propiedad cambia el color de fondo de un elemento?",
+        options: [
+            "text-color",
+            "background-color",
+            "font-color",
+            "color-style"
+        ],
+        answer: "background-color"
+    },
+    {
+        question: "¿Qué principio de diseño promueve Django para evitar la duplicación de código?",
+        options: [
+            "DRY",
+            "KISS",
+            "OOP",
+            "MVC"
+        ],
+        answer: "DRY"
+    },
+    {
+        question: "¿Qué representa la capa de CSS en una página web?",
+        options: [
+            "El contenido",
+            "El estilo y diseño visual",
+            "La lógica del servidor",
+            "La base de datos"
+        ],
+        answer: "El estilo y diseño visual"
+    },
+    {
+        question: "¿Qué componente de una URL representa la ubicación del recurso en el servidor?",
+        options: [
+            "Path",
+            "Query",
+            "Header",
+            "Host"
+        ],
+        answer: "Path"
+    },
+    {
+        question: "¿Cuál es una ventaja del mantenimiento de Bootstrap?",
+        options: [
+            "Es abandonado por la comunidad",
+            "Requiere licencia de pago",
+            "Solo funciona con PHP",
+            "Es mantenido y actualizado por Twitter"
+        ],
+        answer: "Es mantenido y actualizado por Twitter"
+    },
+    {
+        question: "¿Qué es jQuery?",
+        options: [
+            "Una biblioteca JavaScript para facilitar la creación de interfaces",
+            "Un lenguaje de programación de servidores",
+            "Un editor de código",
+            "Un sistema operativo"
+        ],
+        answer: "Una biblioteca JavaScript para facilitar la creación de interfaces"
+    },
+    {
+        question: "¿Qué es una URL?",
+        options: [
+            "Una dirección que identifica un recurso único en la Web",
+            "Una ruta interna de un servidor",
+            "Una etiqueta HTML",
+            "Un archivo de base de datos"
+        ],
+        answer: "Una dirección que identifica un recurso único en la Web"
+    },
+    {
+        question: "¿Qué archivo se debe editar para vincular una vista con una URL en Django?",
+        options: [
+            "base.html",
+            "forms.py",
+            "views.py",
+            "urls.py"
+        ],
+        answer: "urls.py"
+    },
+    {
+        question: "¿Cuál es una característica clave de Django?",
+        options: [
+            "Requiere licencia de pago",
+            "Es de código abierto y facilita el desarrollo seguro y mantenible",
+            "Solo funciona en Windows",
+            "Solo sirve para blogs"
+        ],
+        answer: "Es de código abierto y facilita el desarrollo seguro y mantenible"
+    },
+    {
+        question: "¿Qué editor puede usarse para trabajar con HTML?",
+        options: [
+            "Solo navegadores web",
+            "Notepad++ exclusivamente",
+            "Cualquier editor de texto",
+            "Visual Studio Code"
+        ],
+        answer: "Cualquier editor de texto"
+    },
+    {
+        question: "¿Qué editor de texto es sugerido para trabajar con código HTML y Python?",
+        options: [
+            "Atom",
+            "Notepad",
+            "Sublime Text",
+            "Cualquier editor de texto"
+        ],
+        answer: "Cualquier editor de texto"
+    },
+    {
+        question: 'Un "directorio virtual" en un servidor web se define como:',
+        options: [
+            "Una carpeta local en el equipo del cliente que sincroniza datos con el servidor",
+            "Un subdominio alojado en un servidor diferente",
+            "Un servicio de almacenamiento en la nube externo al servidor",
+            "Un enlace a un directorio físico existente en el disco duro del servidor, con configuración y permisos propios"
+        ],
+        answer: "Un enlace a un directorio físico existente en el disco duro del servidor, con configuración y permisos propios"
+    },
+    {
+        question: "¿Dónde se define la lógica del negocio en Django?",
+        options: [
+            "admin.py",
+            "settings.py",
+            "models.py",
+            "views.py"
+        ],
+        answer: "views.py"
+    },
+    {
+        question: "¿Qué tipo de framework es Django?",
+        options: [
+            "De testing automatizado",
+            "De bases de datos",
+            "De backend en Python para desarrollo web",
+            "De frontend para móviles"
+        ],
+        answer: "De backend en Python para desarrollo web"
+    },
+    {
+        question: "¿Qué permite el método GET en una petición HTTP?",
+        options: [
+            "Crear nuevas bases de datos",
+            "Recuperar o solicitar datos sin modificar",
+            "Eliminar información sensible",
+            "Enviar datos para modificar el servidor"
+        ],
+        answer: "Recuperar o solicitar datos sin modificar"
+    },
+    {
+        question: "¿Cuál es la extensión habitual de un archivo que contiene código Python?",
+        options: [
+            ".txt",
+            ".js",
+            ".html",
+            ".py"
+        ],
+        answer: ".py"
+    },
+    {
+        question: "¿Qué es un modelo en Django?",
+        options: [
+            "Una extensión de Python",
+            "Un archivo de diseño visual",
+            "Un plugin de interfaz",
+            "Una clase que define la estructura de la base de datos"
+        ],
+        answer: "Una clase que define la estructura de la base de datos"
+    },
+    {
+        question: "¿Qué permite la escalabilidad en Django?",
+        options: [
+            "Reemplazar o agregar componentes sin afectar el sistema",
+            "Desinstalar módulos automáticamente",
+            "Ejecutar código en servidores FTP",
+            "Usar solo una base de datos fija"
+        ],
+        answer: "Reemplazar o agregar componentes sin afectar el sistema"
+    },
+    {
+        question: "¿Qué tipo de framework es Bootstrap?",
+        options: [
+            "Backend",
+            "Frontend (CSS y JavaScript)",
+            "Base de datos",
+            "API REST"
+        ],
+        answer: "Frontend (CSS y JavaScript)"
+    },
+    {
+        question: '¿Qué tipo de funciones ofrece el módulo "Effects" en jQuery?',
+        options: [
+            "Animaciones visuales",
+            "Control de servidores",
+            "Generación de PDF",
+            "Acceso a bases de datos"
+        ],
+        answer: "Animaciones visuales"
+    },
+    {
+        question: "¿Cuál es una de las ventajas de seguridad que ofrece Django?",
+        options: [
+            "No necesita autenticación",
+            "Usa cookies para guardar contraseñas sin cifrar",
+            "Permite acceso directo a la base de datos",
+            "Protege contra ataques como SQL injection y scripts entre sitios"
+        ],
+        answer: "Protege contra ataques como SQL injection y scripts entre sitios"
+    },
+    {
+        question: "¿Cuál es la estructura básica de un documento HTML?",
+        options: [
+            "<html><div><body>",
+            "<start><main><end>",
+            "<html><head><body>",
+            "<page><title><script>"
+        ],
+        answer: "<html><head><body>"
+    },
+    {
+        question: "¿Qué arquitectura sigue AngularJS?",
+        options: [
+            "MVC (Modelo-Vista-Controlador)",
+            "MVT",
+            "ORM",
+            "REST"
+        ],
+        answer: "MVC (Modelo-Vista-Controlador)"
+    },
+    {
+        question: "¿Qué tipo de vista se define usando una función tradicional de Python?",
+        options: [
+            "Vista HTML",
+            "Vista basada en funciones",
+            "Vista modular",
+            "Vista heredada"
+        ],
+        answer: "Vista basada en funciones"
+    },
+    {
+        question: "¿Qué herramienta proporciona AngularJS para pruebas unitarias?",
+        options: [
+            "NodeUnit",
+            "Flask",
+            "Django Test",
+            "Karma"
+        ],
+        answer: "Karma"
+    },
+    {
+        question: "¿Qué método HTTP realiza un seguimiento de una conexión?",
+        options: [
+            "TRACE",
+            "DELETE",
+            "PUT",
+            "HEAD"
+        ],
+        answer: "TRACE"
+    },
+    {
+        question: "¿Qué archivo permite personalizar la administración de Django?",
+        options: [
+            "views.py",
+            "admin.py",
+            "apps.py",
+            "settings.py"
+        ],
+        answer: "admin.py"
+    },
+    {
+        question: "¿Qué representa una variable en un template de Django?",
+        options: [
+            "( variable )",
+            "[[ variable ]]",
+            "{{ variable }}",
+            "{variable}"
+        ],
+        answer: "{{ variable }}"
+    },
+    {
+        question: "¿Qué lenguaje está en la base de jQuery?",
+        options: [
+            "Python",
+            "PHP",
+            "JavaScript",
+            "Java"
+        ],
+        answer: "JavaScript"
+    },
+    {
+        question: "¿Qué diferencia a una clase de una función en programación?",
+        options: [
+            "Las clases empaquetan funcionalidades y las funciones no",
+            "Las funciones no retornan valores",
+            "Las clases solo ejecutan scripts",
+            "Las funciones no pueden ser usadas en Django"
+        ],
+        answer: "Las clases empaquetan funcionalidades y las funciones no"
+    },
+    {
+        question: "¿Qué se requiere para usar jQuery en una página HTML?",
+        options: [
+            "Solo instalar Flask",
+            "Crear un backend con Node.js",
+            "Compilar en C++",
+            'Incluir la etiqueta <script src="jquery..."> en el HTML'
+        ],
+        answer: 'Incluir la etiqueta <script src="jquery..."> en el HTML'
+    },
+    {
+        question: 'Una ventaja de optar por un "managed cloud hosting" es:',
+        options: [
+            "El proveedor se encarga de gran parte de la administración básica del servidor",
+            "No se puede escalar recursos según demanda",
+            "El cliente obtiene acceso root y debe gestionar todas las tareas de seguridad",
+            "Solo está disponible para servidores Linux, no para Windows"
+        ],
+        answer: "El proveedor se encarga de gran parte de la administración básica del servidor"
+    },
+    {
+        question: "¿Cómo se llama la clase que transmite atributos a otras en programación orientada a objetos?",
+        options: [
+            "Clase raíz",
+            "Clase abstracta",
+            "Clase hija",
+            "Clase padre"
+        ],
+        answer: "Clase padre"
+    },
+    {
+        question: "¿Qué método HTTP se utiliza para enviar datos al servidor y cambiar información?",
+        options: [
+            "TRACE",
+            "GET",
+            "OPTIONS",
+            "POST"
+        ],
+        answer: "POST"
+    },
+    {
+        question: "¿Qué representa la capa de datos en Django?",
+        options: [
+            "El código del servidor",
+            "La configuración de usuarios",
+            "La estructura de la base de datos",
+            "La presentación de la interfaz"
+        ],
+        answer: "La estructura de la base de datos"
+    },
+    {
+        question: "¿Cuál es una diferencia entre JavaScript y jQuery?",
+        options: [
+            "Ambos son lenguajes distintos",
+            "jQuery funciona sin JavaScript",
+            "JavaScript es una biblioteca de jQuery",
+            "jQuery es una biblioteca escrita en JavaScript"
+        ],
+        answer: "jQuery es una biblioteca escrita en JavaScript"
+    },
+    {
+        question: "¿Qué lenguaje utiliza el framework Django?",
+        options: [
+            "Java",
+            "JavaScript",
+            "PHP",
+            "Python"
+        ],
+        answer: "Python"
+    },
+    {
+        question: '¿Qué representa la "V" en el patrón MVC?',
+        options: [
+            "Validación",
+            "Vista",
+            "Variable",
+            "Valor"
+        ],
+        answer: "Vista"
+    },
+    {
+        question: "¿Qué ventaja ofrece jQuery en el desarrollo web?",
+        options: [
+            "Desactiva eventos del navegador",
+            "No permite animaciones",
+            "Reduce la cantidad de código necesario",
+            "Requiere menos navegadores"
+        ],
+        answer: "Reduce la cantidad de código necesario"
+    },
+    {
+        question: "¿Qué es una aplicación SPA en AngularJS?",
+        options: [
+            "Aplicación sin HTML",
+            "Solo una vista para móviles",
+            "Una aplicación de múltiples páginas",
+            "Aplicación de una sola página"
+        ],
+        answer: "Aplicación de una sola página"
+    },
+    {
+        question: "¿Qué tipo de lenguaje de programación es Python?",
+        options: [
+            "Lenguaje de máquina estructurado",
+            "Lenguaje de alto nivel, dinámico, libre y multiplataforma",
+            "Lenguaje de bajo nivel y propietario",
+            "Lenguaje compilado con licencia exclusiva"
+        ],
+        answer: "Lenguaje de alto nivel, dinámico, libre y multiplataforma"
+    },
+    {
+        question: "¿Qué significa CSS?",
+        options: [
+            "Central Styling Script",
+            "Control Style Structure",
+            "Cascading Style Sheets",
+            "Coding System Style"
+        ],
+        answer: "Cascading Style Sheets"
+    },
+    {
+        question: "¿Qué permiten las APIs en el desarrollo de software?",
+        options: [
+            "Encriptar todos los datos de usuario",
+            "Romper la independencia de aplicaciones",
+            "Integrar y comunicar diferentes aplicaciones",
+            "Crear animaciones visuales"
+        ],
+        answer: "Integrar y comunicar diferentes aplicaciones"
+    },
+    {
+        question: "¿Qué significa API?",
+        options: [
+            "Automated Program Instruction",
+            "Advanced Programming Interface",
+            "Application Programming Interface",
+            "Active Python Integration"
+        ],
+        answer: "Application Programming Interface"
+    },
+    {
+        question: "¿Qué diferencia principal tiene el patrón MVT respecto a MVC?",
+        options: [
+            "El MVT utiliza archivos JSON",
+            "El MVC usa JavaScript y el MVT no",
+            "El MVT reemplaza el controlador por un enrutador o URLs",
+            "El MVC no permite bases de datos"
+        ],
+        answer: "El MVT reemplaza el controlador por un enrutador o URLs"
+    },
+    {
+        question: "¿Qué principio promueve Django para evitar la repetición de código?",
+        options: [
+            "KISS",
+            "MVC",
+            "DRY (Don’t Repeat Yourself)",
+            "SOLID"
+        ],
+        answer: "DRY (Don’t Repeat Yourself)"
+    },
+    {
+        question: "¿Qué método HTTP solicita únicamente el encabezado de la respuesta?",
+        options: [
+            "PATCH",
+            "POST",
+            "HEAD",
+            "GET"
+        ],
+        answer: "HEAD"
+    },
+    {
+        question: "¿Qué es un serializador en el contexto de microservicios?",
+        options: [
+            "Un servidor en la nube para imágenes",
+            "Una base de datos con permisos compartidos",
+            "Una estructura que permite enviar y recibir datos entre aplicaciones",
+            "Un navegador para pruebas internas"
+        ],
+        answer: "Una estructura que permite enviar y recibir datos entre aplicaciones"
+    },
+    {
+        question: "¿Cuál es una característica de seguridad de Django?",
+        options: [
+            "No permite autenticación",
+            "Solo se usa en desarrollo local",
+            "Previene ataques como SQL injection y scripts entre sitios",
+            "Usa cookies para almacenar contraseñas"
+        ],
+        answer: "Previene ataques como SQL injection y scripts entre sitios"
+    },
+    {
+        question: "¿Qué permite hacer Bootstrap con el diseño de una página web?",
+        options: [
+            "Eliminar etiquetas HTML",
+            "Evitar el uso de CSS",
+            "Adaptar la interfaz al tamaño del dispositivo",
+            "Crear solo versiones móviles"
+        ],
+        answer: "Adaptar la interfaz al tamaño del dispositivo"
+    },
+    {
+        question: "¿Qué componente recibe una petición y devuelve una respuesta?",
+        options: [
+            "Template",
+            "Modelo",
+            "Admin",
+            "Vista (View)"
+        ],
+        answer: "Vista (View)"
+    },
+    {
+        question: "¿Qué archivo gestiona la configuración general del proyecto Django?",
+        options: [
+            "views.py",
+            "settings.py",
+            "urls.py",
+            "models.py"
+        ],
+        answer: "settings.py"
+    },
+    {
+        question: "¿Qué hace una plantilla (template) en Django?",
+        options: [
+            "Define cómo se presenta la información al usuario",
+            "Controla el flujo de datos",
+            "Maneja la base de datos",
+            "Procesa lógica del servidor"
+        ],
+        answer: "Define cómo se presenta la información al usuario"
+    },
+    {
+        question: "¿Qué estructura de Python permite agrupar módulos relacionados?",
+        options: [
+            "Biblioteca",
+            "Script",
+            "Paquete",
+            "Proyecto"
+        ],
+        answer: "Paquete"
+    },
+    {
+        question: "¿Cuál es el objetivo de JavaScript en una página web?",
+        options: [
+            "Diseñar formularios",
+            "Controlar el contenido y añadir interactividad",
+            "Estilizar bordes y colores",
+            "Crear estructuras HTML"
+        ],
+        answer: "Controlar el contenido y añadir interactividad"
+    },
+    {
+        question: "¿Cuál es el primer paso antes de instalar Django?",
+        options: [
+            "Registrar el dominio",
+            "Descargar Visual Studio",
+            "Crear una base de datos",
+            "Tener Python instalado"
+        ],
+        answer: "Tener Python instalado"
+    },
+    {
+        question: "¿Qué permite la capa de presentación (templates) en Django?",
+        options: [
+            "Ejecutar código backend",
+            "Definir cómo se muestra la información al usuario",
+            "Configurar el servidor",
+            "Crear scripts de seguridad"
+        ],
+        answer: "Definir cómo se muestra la información al usuario"
+    },
+    {
+        question: "¿Qué patrón de diseño sigue Django?",
+        options: [
+            "ORM",
+            "MVT",
+            "MVP",
+            "MVVM"
+        ],
+        answer: "MVT"
+    },
+    {
+        question: "¿Qué hace la instrucción {% for item in lista %} en una plantilla?",
+        options: [
+            "Filtra resultados por campos",
+            "Ejecuta un condicional",
+            "Itera sobre una lista de elementos",
+            "Crea un nuevo modelo"
+        ],
+        answer: "Itera sobre una lista de elementos"
+    },
+    {
+        question: "¿Cuál es la función principal de un servidor web?",
+        options: [
+            "Gestionar bases de datos locales sin conexión",
+            "Ejecutar aplicaciones de escritorio remotamente",
+            "Almacenar y emitir archivos de un sitio para que pueda ser visitado por usuarios a través de Internet",
+            "Compilar código fuente en tiempo real"
+        ],
+        answer: "Almacenar y emitir archivos de un sitio para que pueda ser visitado por usuarios a través de Internet"
+    },
+    {
+        question: "¿Cuál de los siguientes NO es un módulo de jQuery?",
+        options: [
+            "Effects",
+            "Ajax",
+            "Storage",
+            "Event"
+        ],
+        answer: "Storage"
+    },
+    {
+        question: "¿Cuál de las siguientes es una forma válida de declarar una regla CSS interna en HTML?",
+        options: [
+            "<design> h1 { color: blue; } </design>",
+            "<css> h1 { color: blue; } </css>",
+            "<style> h1 { color: blue; } </style>",
+            "<script> h1 { color: blue; } </script>"
+        ],
+        answer: "<style> h1 { color: blue; } </style>"
+    },
+    {
+        question: "¿Dónde se definen las plantillas en Django?",
+        options: [
+            "templates",
+            "models.py",
+            "settings.py",
+            "views.py"
+        ],
+        answer: "templates"
+    },
+    {
+        question: "¿Qué son las template tags en Django?",
+        options: [
+            "Archivos de configuración para las vistas",
+            "Herramientas para mostrar datos y controlar lógica dentro del HTML",
+            "Librerías CSS usadas en HTML",
+            "Funciones JavaScript que permiten reutilizar código"
+        ],
+        answer: "Herramientas para mostrar datos y controlar lógica dentro del HTML"
+    },
+    {
+        question: "¿Cuál es la función del 'modelo' en una arquitectura de microservicios?",
+        options: [
+            "Ejecuta los estilos CSS",
+            "Mapea la base de datos y contiene propiedades y métodos",
+            "Actúa como cliente web",
+            "Dirige las URL hacia las funciones"
+        ],
+        answer: "Mapea la base de datos y contiene propiedades y métodos"
+    },
+    {
+        question: "¿Qué palabra clave se utiliza en Python para importar un módulo?",
+        options: [
+            "export",
+            "import",
+            "require",
+            "include"
+        ],
+        answer: "import"
+    },
+    {
+        question: "¿Qué propiedad en CSS se utiliza para centrar el texto?",
+        options: [
+            "font-size",
+            "text-align",
+            "display",
+            "align-content"
+        ],
+        answer: "text-align"
+    },
+    {
+        question: "¿Cuál es el lema de jQuery?",
+        options: [
+            '"Más código, más control"',
+            '"Escribir menos y hacer más"',
+            '"El servidor manda"',
+            '"Animaciones para todos"'
+        ],
+        answer: '"Escribir menos y hacer más"'
+    },
+    {
+        question: "¿Dónde debe colocarse la sentencia import en un archivo Python?",
+        options: [
+            "Dentro de una función",
+            "Después del bloque main",
+            "Al final del código",
+            "En las primeras líneas del archivo"
+        ],
+        answer: "En las primeras líneas del archivo"
+    },
+    {
+        question: "¿Qué método HTTP permite saber qué métodos están soportados por el servidor?",
+        options: [
+            "TRACE",
+            "PUT",
+            "OPTIONS",
+            "HEAD"
+        ],
+        answer: "OPTIONS"
+    },
+    {
+        question: "¿Cuál es una función del enrutamiento en AngularJS?",
+        options: [
+            "Validar formularios",
+            "Crear estilos CSS",
+            "Establecer conexión con bases de datos",
+            "Navegar entre vistas sin recargar la página"
+        ],
+        answer: "Navegar entre vistas sin recargar la página"
+    },
+    {
+        question: "¿Qué archivo permite asociar URLs a vistas específicas en Django?",
+        options: [
+            "urls.py",
+            "apps.py",
+            "admin.py",
+            "models.py"
+        ],
+        answer: "urls.py"
+    },
+    {
+        question: "¿Qué representa la letra 'M' en el patrón MVC que sigue Django?",
+        options: [
+            "Map",
+            "Management",
+            "Model",
+            "Middleware"
+        ],
+        answer: "Model"
+    },
 ];
 
 DAWQuestions.forEach((question, index) => {
