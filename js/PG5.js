@@ -1194,36 +1194,45 @@ export const MDQuestions = [
     },
 ];
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+// Mezclar preguntas tipo matching y de opción múltiple
 MDQuestions.forEach((question, index) => {
-
     if (question.type === "matching") {
-        // Verificar que términos y definiciones son arreglos válidos
-        if (Array.isArray(question.terms) && Array.isArray(question.definitions)) {
-            // Crear pares combinados
-            const pairs = question.terms.map((term, i) => ({
-                term,
-                definition: question.definitions[i]
-            }));
+        // Validar que 'answer' tenga pares válidos
+        const pairs = Object.entries(question.answer);
+        if (pairs.length > 0) {
+            // Separar términos y definiciones
+            const terms = pairs.map(([term, _]) => term);
+            const definitions = pairs.map(([_, definition]) => definition);
 
-            // Mezclar los pares
-            const shuffledPairs = pairs.sort(() => Math.random() - 0.5);
+            // Mezclar ambos por separado (rompe la relación directa)
+            shuffleArray(terms);
+            shuffleArray(definitions);
 
-            // Asignar términos y definiciones mezclados de vuelta
-            question.terms = shuffledPairs.map(pair => pair.term);
-            question.definitions = shuffledPairs.map(pair => pair.definition);
+            // Asignar mezclados
+            question.terms = terms;
+            question.definitions = definitions;
+
+            // Mostrar en consola para verificar mezcla
+            console.log(`Pregunta ${index} - ${question.question}`);
+            console.log("Términos mezclados:", question.terms);
+            console.log("Definiciones mezcladas:", question.definitions);
         } else {
-            console.error(
-                `Error en la pregunta "${question.question}" en el índice ${index}: 'terms' o 'definitions' no son arreglos válidos.`
-            );
+            console.error(`Pregunta ${index}: el campo 'answer' está vacío o mal estructurado.`);
         }
     } else if (Array.isArray(question.options)) {
-        // Verificar si las opciones son válidas y mezclarlas
-        question.options = question.options.sort(() => Math.random() - 0.5);
+        // Mezclar opciones de elección múltiple
+        shuffleArray(question.options);
     } else {
-        console.error(
-            `Error en la pregunta "${question.question}" en el índice ${index}: 'options' no es un arreglo válido.`
-        );
+        console.error(`Pregunta ${index}: 'options' no es un arreglo válido.`);
     }
 });
+
 
 
